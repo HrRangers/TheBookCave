@@ -19,3 +19,23 @@ body{padding-top:50px;padding-bottom:20px}.body-content{padding-left:15px;paddin
     font-size: 34px;
     color: blue;
 }
+
+.user-column{   
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+.user-image{
+    background-color: blue;
+
+}
+.user-login{
+    background-color: white;
+  
+}  
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
