@@ -32,41 +32,4 @@
     .carousel-caption {
         display: none;
     }
-    
-.nav-logo{
-        clear:left;
-        float:left;
-        text-align:left;
-        width:112px;
-        height:91px;
-    }
-.nav-user{
-        clear:right;
-        float:right;
-        text-align:right;
-        width:112px;
-        height:91px;
-    }
 
-#footer-about{
-        
-        background-color: blue; 
-        padding-right: 30px;
-}
-
-#footer-contact.about-us{
-        
-        background-color: blue; 
-        padding-right: 30px;
-}
-
-.about-us{
-        
-        color: hotpink;
-}
-
-.contact-us, a{
-        color: hotpink;
-       
-}
-  

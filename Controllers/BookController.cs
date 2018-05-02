@@ -30,5 +30,9 @@ namespace TheBookCave.Controllers
         {
             return View("AboutUs");
         }
+         public IActionResult ContactUs()
+        {
+            return View("ContactUs");
+        }
     }
 }
