@@ -26,8 +26,8 @@ namespace TheBookCave.Controllers
         public IActionResult ListOfBooks()
         {   
             var books = _bookRepo.GetAllBooks();
-            return View("ListOfBooks");
-           // return View(books);
+            //return View("ListOfBooks");
+            return View(books);
         }
         public IActionResult NewBooks()
         {

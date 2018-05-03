@@ -6,7 +6,7 @@ namespace TheBookCave.Models.EntityModels
         public int Id { get; set; }
         
         /// Bok tharf ad ISBN numer
-        public int ISBN { get; set; }
+        public string ISBN { get; set; }
 
         /// Bok tharf ad hafa Titill
         public string Title { get; set; }
@@ -18,7 +18,7 @@ namespace TheBookCave.Models.EntityModels
         public string Genre { get; set; }
        
         /// Bok tharf ad hafa rating. 0 til 5
-        public string Rating{ get; set; }
+        public int Rating{ get; set; }
         
         /// Bok tharf ad hafa bokakapu
         public string Image{ get; set; }

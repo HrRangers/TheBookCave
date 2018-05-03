@@ -19,7 +19,7 @@ namespace TheBookCave.Models.ViewModels
         public string Genre { get; set; }
        
         /// Bok tharf ad hafa rating. 0 til 5
-        public string Rating{ get; set; }
+        public int Rating{ get; set; }
         
         /// Bok tharf ad hafa bokakapu
         public string Image{ get; set; }
