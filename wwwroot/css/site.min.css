@@ -20,22 +20,22 @@ body{padding-top:50px;padding-bottom:20px}.body-content{padding-left:15px;paddin
     color: blue;
 }
 
-.user-column{   
-    float: left;
-    width: 50%;
-    padding: 10px;
+.short-description
+{   
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+    font-size: 12px;
 }
-.user-image{
-    background-color: blue;
-
+.user-signin {
+    background-color: lightslategray;
+    color:white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+    width: 20%;
 }
-.user-login{
-    background-color: white;
-  
-}  
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
+button:hover {
+    opacity: 0.8;
 }

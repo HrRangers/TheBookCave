@@ -1,6 +1,36 @@
+@model List<TheBookCave.Models.ViewModels.BookListViewModel>
+
 @{
-    ViewData["Title"] = "All books";
+    ViewData["Title"] = "List of all our books!";
 }
 <h2>@ViewData["Title"]</h2>
 <h3>@ViewData["Message"]</h3>
-<p>List of new books here plz</p>
+<div class="container-fluid"
+	<div class="row">
+    @foreach(var book in @Model)
+    { 
+		<div class="col-md-4">
+
+            <div class="jumbotron">
+				<h2>
+					@book.Title
+				</h2>
+                <img class="book-cover" src="@book.Image" alt="Not found">
+				<p class="short-description">
+					@book.Description
+				</p>
+                    <p>Author: @book.Author</p>
+                    <p>Genre: @book.Genre</p>
+                    <p>Rating: @book.Rating</p>
+                    <p>ISBN: @book.ISBN</p>
+                    <p>Price: @book.Price kr</p>
+                    <p>Review: @book.Review</p>
+				<p>
+					<a class="btn btn-primary btn-large" href="#">Learn more</a>
+                    <a class="btn btn-primary btn-large" href="#">add to cart</a>
+				</p>
+			</div>
+		</div>
+    }
+	</div>
+</div>
