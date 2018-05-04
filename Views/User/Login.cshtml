@@ -1,0 +1,25 @@
+@{
+    ViewData["Title"] = "Login";
+}
+
+<link rel="stylesheet" href="~/css/userslogin.css"/>
+
+<form class=center>
+<h1>There is no friend as loyal as a book</h1>
+ 
+ <fieldset>
+  <legend>Login</legend>
+      <label for="username">Username: </label>
+      <input id="user-login-username" type="text" placeholder="Enter Username" name="username"><br>
+
+      <label for="passsword">Password: </label>
+      <input id="user-login-password" type="password" placeholder="Enter Password" name="psw"><br>
+
+      <button id="user-login-cancel" type="submit" class="cancel" asp-action= "UserLoginIndex">Cancel</button>
+      
+      <button id="user-login-login" type="submit" class="login">Login</button><br>
+      <label>
+        <input id="user-login-remember" type="checkbox" checked="checked" name="remember"> Remember me
+      </label> 
+ </fieldset>
+ </form>

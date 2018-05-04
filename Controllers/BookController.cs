@@ -19,11 +19,23 @@ namespace TheBookCave.Controllers
         }
 
         public IActionResult Index()
-        {   
-            var books = _bookRepo.GetAllBooks();
-            return View(books);
+        {
+            return View();
         }
-        
+    
+        public IActionResult ListBooksByGenre(string genre)
+        {   
+
+            if (genre == null)
+            {
+                return ListOfBooks();
+            }
+            else
+            {   
+                var genrelistBooks= _bookRepo.GetBooksByGenre(genre);
+                return View(genrelistBooks);
+            }      
+        }
         public IActionResult ListOfBooks()
         {   
             var books = _bookRepo.GetAllBooks();
@@ -35,8 +47,9 @@ namespace TheBookCave.Controllers
             return View("NewBooks");
         }
         public IActionResult TopTenBooks()
-        {
-            return View("TopTenBooks");
+        {   
+            var toptenBooks = _bookRepo.GetTop10Books();
+            return View(toptenBooks);
         }
         public IActionResult AboutUs()
         {

@@ -1,11 +1,3 @@
-@model List<TheBookCave.Models.ViewModels.BookListViewModel>
-
-@{
-    ViewData["Title"] = "Book Catalogue";
-}
-<h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
-
 <form id="genre" asp-controller="Book" asp-action="ListBooksByGenre" method="POST">
 	<input type="submit" name="genre" value="Fantasy"/>
 	<input type="submit" name="genre" value="Food & Fun"/>
@@ -16,6 +8,7 @@
 	<input type="submit" name="genre" value="Star Wars"/>
 	<input type="submit" name="genre" value="Science & Geography"/>
 </form>
+   
     @foreach(var book in @Model)
     { 		
 			<br>
@@ -29,7 +22,3 @@
 			</div>
 		
 	}
-
-
-
-

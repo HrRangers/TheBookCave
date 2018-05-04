@@ -1,0 +1,33 @@
+@{
+    ViewData["Title"] = "Login";
+}
+
+<link rel="stylesheet" href="~/css/userslogin.css"/>
+<fieldset>
+    <legend >Sign Up</legend>
+    <form class ="signupbox"> 
+            <p>Join The Book Cave</p>
+            <label for="name">Name</label>
+            <br>
+            <input type="text" placeholder="First name*"name="name">
+            <br>
+            <label for="name"></label>
+            <input type="text" placeholder="Last name*"name="name">
+            <br>
+            <label for="email">Email</label>
+            <br>
+            <input type="text" placeholder="Enter Email*" name="email">
+            <br>
+            <label for="psw">Password</label>
+            <br>
+            <input type="password" placeholder="Enter Password*" name="psw">
+            <br>
+            <input type="password" placeholder="Verify Password*" name="psw">
+            <br>
+            <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me</label>
+            <br>
+            <button id="user-signup-cancel" type="submit" class="cancel" asp-action= "UserLoginIndex">Cancel</button>
+            <button id="user-signup-submit" type="submit" class="signup">Sign Up</button>
+  </form>
+</fieldset>

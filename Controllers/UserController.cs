@@ -10,10 +10,16 @@ namespace TheBookCave.Controllers
 {
     public class UserController : Controller
     {
-        public IActionResult UserLogin()
+        public IActionResult LogIn()
         {
-            return View("UserLoginIndex");
+            return View("LogIn");
         }
+
+          public IActionResult SignUp()
+        {
+            return View("SignUp");
+        }
+
 
     }       
 }   

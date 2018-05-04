@@ -1,7 +1,17 @@
-﻿@{
-    ViewData["Title"] = "About";
-}
-<h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
+﻿@model List<TheBookCave.Models.ViewModels.BookListViewModel>
 
-<p>Here should be top ten books</p>
+@{
+    ViewData["Title"] = "Top Ten Books" ;
+}
+
+    @foreach(var book in @Model)
+    { 		
+		<h2>@book.Title</h2>
+		<img class="book-cover" src="@book.Image" alt="Not found">
+        <p>@book.Rating</p>
+		<p>@book.Author</p>
+		<p>@book.Price Kr</p>
+		<a href="#" class="btn btn-primary">Go somewhere</a>	
+		
+	}
+	

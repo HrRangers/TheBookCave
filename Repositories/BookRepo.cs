@@ -15,22 +15,39 @@ namespace TheBookCave.Repositories
 
         public List<BookListViewModel> GetAllBooks()
         {
-            var books = (from a in _db.Books
+            var books = (from b in _db.Books
                         select new BookListViewModel
                         {
-                            Id = a.Id,
-                            ISBN = a.ISBN,
-                            Title = a.Title,
-                            Author = a.Author,
-                            Genre = a.Genre,
-                            Rating = a.Rating,
-                            Image = a.Image,
-                            Review = a.Review,
-                            Price = a.Price,
-                            Description = a.Description
+                            Id = b.Id,
+                            ISBN = b.ISBN,
+                            Title = b.Title,
+                            Author = b.Author,
+                            Genre = b.Genre,
+                            Rating = b.Rating,
+                            Image = b.Image,
+                            Review = b.Review,
+                            Price = b.Price,
+                            Description = b.Description
         
                         }).ToList();
             return books;
+        }
+
+        public List<BookListViewModel> GetTop10Books()
+        {
+             var top10books = (from b in GetAllBooks()
+                        orderby b.Rating
+                        descending
+                        select b).Take(10).ToList();
+             return top10books;
+        }
+        public List<BookListViewModel> GetBooksByGenre(string genre)
+        {       
+
+                var genrelistBooks = (from g in GetAllBooks()
+                                       where(g.Genre.ToLower() == genre.ToLower())
+                                       select g).ToList();                        
+                return genrelistBooks;
         }
     }
 }
