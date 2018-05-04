@@ -17,40 +17,45 @@
     </environment>
 </head>
 <body> 
-    <div class="container">     
-        <div class="navbar navbar-default"> 
-        <!-- logo and text -->
-            <div class="navbar-logo"
-                <a class="navbar-brand" asp-area=""  asp-controller="Book" asp-action="Index"> 
-                <img src="~/wwwroot/images/logo.png" width="150" height="100" alt="logo.png"> 
-                </a>
-                <h1 class ="company-heading">TheBookCave</h1>
-                <a class="nav navbar-nav navbar-right" asp-controller="User" asp-action="UserLogin">Signup / Signin</a></li>
-            </div>
-    <form class="navbar-form">
-            <div class="form-group input-form">
-                <input id="search-value"asp-area="" asp-controller="Book" asp-action ="Search" class="form-control" type="search">
-                    <div class="input-group-btn">
-                        <button id="search-value" type ="button" class="btn btn-default">
-                            <span class="glyphicon glyphicon-search"</span>
-                        </button>
-                    </div>
-            </div>
-    </form>
-    </div>
-    <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Book" asp-action="ListOfBooks">List of Books</a></li>
-                    <li><a asp-area="" asp-controller="Book" asp-action="TopTenBooks">Top Ten Books</a></li>
-                    <li><a asp-area="" asp-controller="Book" asp-action="NewBooks">NewBooks</a></li>
-                    <li><a asp-area="" asp-controller="Book" asp-action="AboutUs">About us</a></li>
-                </ul>
-    </div>
-         
-    </div>
-    
-    
-    <div class="container body-content">
+      <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="page-header">
+				<h1>
+					TheBookCave <small>All your books!</small>
+				</h1>
+			</div>
+			<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-dark bg-dark">
+				<a class="navbar-brand" asp-controller="Book" asp-action="Index">
+					<img src="~/images/logo.png" width="150" height="100" alt="logo.png">
+				</a>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<form class="form-inline">
+						<input class="form-control mr-sm-2" type="text"placeholder="Search..."> 
+						<button asp-controller="Book" asp-action ="Search" class="btn btn-primary my-2 my-sm-0" type="submit">
+							Search
+						</button>
+					</form>
+					<ul class="navbar-nav ml-md-auto">
+						<li class="nav-item">
+							 <a class="nav-link" asp-controller="User" asp-action="UserLogin">Signin / Sign out <span class="sr-only">(current)</span></a>
+						</li>
+					</ul>
+	
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a asp-area="" asp-controller="Book" asp-action="ListOfBooks">List of Books</a></li>
+						<li><a asp-area="" asp-controller="Book" asp-action="TopTenBooks">Top Ten Books</a></li>
+						<li><a asp-area="" asp-controller="Book" asp-action="NewBooks">NewBooks</a></li>
+						<li><a asp-area="" asp-controller="Book" asp-action="AboutUs">About us</a></li>
+					</ul>
+				</div>
+			</nav>
+			<h2>
+				Heading
+			</h2>
+            
         @RenderBody()
         <hr />
        <!--Footer-->
@@ -65,30 +70,23 @@
                 </br>
                 <a class="contact-us" asp-area="" asp-controller="Book" asp-action="ContactUs">Contact us</a>   
             </div>
-            <!--/.First column-->
+         <div class="row">
+           <!--/.Second column-->
             <div class="col-md-6">
                 <i class="glyphicon glyphicon-user"></i>
                 <span>Who are we?</span>
                 </br>
                 <a class="about-us" asp-area="" asp-controller="Book" asp-action="AboutUs">About us</a>   
             </div>
-            <!--/.Second column-->
-        </footer>
-            </div>
-          
-
         </div>
-    </div>
-
+  </div>
     <!--Copyright-->
-    <div class="footer-copyright py-3 text-center">
+    <div class="footer-copyright py-3 text-right">
         © 2018 TheBookCave:        
     </div>
     <!--/.Copyright-->
 </footer>
 <!--/.Footer-->
-    </div>
-
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
