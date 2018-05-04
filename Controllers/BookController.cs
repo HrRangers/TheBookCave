@@ -22,8 +22,9 @@ namespace TheBookCave.Controllers
         {
             return View();
         }
-    
-        public IActionResult ListBooksByGenre(string genre)
+
+        [HttpPost]
+        public IActionResult ListOfBooks(string genre)
         {   
 
             if (genre == null)
@@ -36,6 +37,7 @@ namespace TheBookCave.Controllers
                 return View(genrelistBooks);
             }      
         }
+        [HttpGet]
         public IActionResult ListOfBooks()
         {   
             var books = _bookRepo.GetAllBooks();
