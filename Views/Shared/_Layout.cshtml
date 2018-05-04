@@ -14,6 +14,8 @@
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/css/footer.css" asp-append-version="true"  />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </environment>
 </head>
 <body> 
@@ -37,25 +39,21 @@
 </form>
     
     <ul class="nav navbar-nav navbar-right">
-      <li><a asp-controller="User" asp-action="SignUp"style="color:white"><span class="glyphicon glyphicon-user" style="color:aqua"></span> Sign Up</a></li>
-      <li><a asp-controller="User" asp-action="LogIn" style="color:white"><span class="glyphicon glyphicon-log-in" style="color:aqua"></span> Login</a></li>
+      <li><a href="#" style="color:white"><span class="glyphicon glyphicon-user" style="color:aqua"></span> Sign Up</a></li>
+      <li><a href="#" style="color:white"><span class="glyphicon glyphicon-log-in" style="color:aqua"></span> Login</a></li>
     </ul>
   </div>
 
     <nav class="navbar navbar-inverse bottom">
         <ul class="nav navbar-nav links">
-            <li><a class="navbuttons" asp-area="" asp-controller="Book" asp-action="ListOfBooks">Book Catalogue</a></li>
+            <li><a id="list" class="navbuttons" asp-area="" asp-controller="Book" asp-action="ListOfBooks">List of Books</a></li>
             <li><a class="navbuttons" asp-area="" asp-controller="Book" asp-action="TopTenBooks">Top Ten Books</a></li>
-            <li><a class="navbuttons" asp-area="" asp-controller="Book" asp-action="NewBooks">New Books</a></li>
-            <li><a class="navbuttons" asp-area="" asp-controller="Book" asp-action="AboutUs">About us</a></li>
+            <li><a class="navbuttons" asp-area="" asp-controller="Book" asp-action="NewBooks">NewBooks</a></li>
+            <li><a id="about" class="navbuttons" asp-area="" asp-controller="Book" asp-action="AboutUs">About us</a></li>
         </ul>
     </nav>
 
 </nav>
-
-			<h2>
-				Heading
-			</h2>
             
         @RenderBody()
         <hr />
@@ -66,7 +64,7 @@
         <div class="row">
             <!--First column-->
             <div class="col-md-6">
-                <i class="glyphicon glyphicon-envelope"></i> 
+                <i class="fa fa-envelope"></i> 
                 <span>Lets talk!</span>
                 </br>
                 <a class="contact-us" asp-area="" asp-controller="Book" asp-action="ContactUs">Contact us</a>   
@@ -74,41 +72,23 @@
          <div class="row">
            <!--/.Second column-->
             <div class="col-md-6">
-                <i class="glyphicon glyphicon-user"></i>
+                <i class="fa fa-users"></i>
                 <span>Who are we?</span>
                 </br>
                 <a class="about-us" asp-area="" asp-controller="Book" asp-action="AboutUs">About us</a>   
             </div>
-        </div>
-  </div>
-    <!--Copyright-->
-    <div class="footer-copyright py-3 text-right">
-        © 2018 TheBookCave:        
-    </div>
-    <!--/.Copyright-->
-</footer>
-<!--/.Footer-->
-    <environment include="Development">
-        <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
-    </environment>
-    <environment exclude="Development">
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery"
-                crossorigin="anonymous"
-                integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
-        </script>
-        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                crossorigin="anonymous"
-                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
-        </script>
-        <script src="~/js/site.min.js" asp-append-version="true"></script>
-    </environment>
+            <div class="social-media">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </div>
+            <div class="footer-copyright py-3 text-right">© 2018 The Book Cave</div>
 
-    @RenderSection("Scripts", required: false)
+        </div>
+        
+  </div>
+
+</footer>
+
 </body>
 </html>

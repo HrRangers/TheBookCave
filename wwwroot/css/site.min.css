@@ -10,6 +10,11 @@ line-height:1.4;
 width:100%
 }
 
+div.container-fluid{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
 @media screen and (max-width:767px){
 .carousel-caption{
 display:none}
@@ -26,16 +31,25 @@ ul.nav.navbar-nav.links li{
     text-align: center;
 }
 
-
 .navbar{
     background-color: #dddddd;
     border: none;
     margin-bottom: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .navbar .navbar-logo a,
 .navbar .navbar-nav li a{
     color: #000000;
+}
+
+#list{
+    border-bottom-left-radius: 10px;
+}
+
+#about {
+    border-bottom-right-radius: 10px;
 }
 
 .container-fluid.topnav{
@@ -62,19 +76,22 @@ i.glyphicon.glyphicon-search:hover{
 }
 i.glyphicon.glyphicon-search{
     color: aqua;
-
 }
 
 a.navbar-brand img {
-    width: auto;
-    height: 150%;
     width: 100%;
+    padding-left: 10%;
+    margin: 0px;
+    height: auto;
+}
+
+a.navbar-brand {
+    padding: 10px;
 }
 
 div.input-group {
     float: left;
     width: 500px;
-
 }
 
 a.navbuttons {
@@ -89,7 +106,7 @@ nav.navbar.navbar-inverse.bottom {
 
     color: aqua;
     background-color: black;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 .book-cover
@@ -106,6 +123,9 @@ nav.navbar.navbar-inverse.bottom {
     text-overflow: ellipsis;
 }
 
+ul.nav.navbar-nav.navbar-right {
+    margin-right: 0px;
+}
 
 ul.nav.navbar-nav.navbar-right li a {
     float: left;

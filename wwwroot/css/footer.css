@@ -1,0 +1,98 @@
+footer.page-footer.font-small.blue.pt-4.mt-4 {
+    background-color: black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    padding-bottom: 20px;
+    padding-top: 25px;
+ }
+
+ div.col-md-6 {
+     float: left;
+     color: aqua;
+     float: left;
+     width: 25%;
+ }
+
+a.contact-us {
+     color: white;
+ }
+
+a.about-us {
+    color: white;
+}
+
+a.contact-us:hover {
+    text-decoration: none;
+    border: dashed 3px aqua;
+    transition: 0.5s;
+}
+
+a.about-us:hover {
+    text-decoration: none;
+    border: dashed 3px aqua;
+    transition: 0.5s;
+}
+
+div.footer-copyright.py-3.text-right {
+    float: right;
+    padding-right: 8%;
+    padding-top: 10px;
+
+}
+
+div.social-media {
+    float: left;
+    width: auto;
+    
+}
+
+a.fa.fa-facebook {
+    float: left;
+    background: #3B5998;
+    color: white;
+    padding: 10px;
+    margin-right: 20px;
+    border: 5px solid black;
+
+}
+
+a.fa.fa-twitter {
+    float: left;
+    background: #55ACEE;
+    color: white;
+    padding: 10px;
+    margin-right: 20px;
+    border: 5px solid black;
+}
+
+a.fa.fa-instagram {
+    float: left;
+    background: #125688;
+    color: white;
+    padding: 10px;
+    border: 5px solid black;
+
+}
+
+a.fa.fa-facebook:hover {
+    border: dashed 5px aqua;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+a.fa.fa-twitter:hover {
+    border: dashed 5px aqua;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+a.fa.fa-instagram:hover {
+    border: dashed 5px aqua;
+    text-decoration: none;
+    transition: 0.5s;
+}
