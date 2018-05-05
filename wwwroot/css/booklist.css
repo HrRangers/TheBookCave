@@ -1,0 +1,82 @@
+.genre-nav {
+  margin-left: 30px;
+  position: fixed;
+  border: none;
+  width: 200px;
+}
+
+.genre-nav input {
+  border: none;
+  background-color: white;
+  color: black;
+  display: block;
+  padding: 12px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.genre-nav input:hover {
+  border: none;
+  background-color: none;
+  color: blue;
+}
+
+.genre-nav input:active {
+  border: none;
+  background-color: none;
+  color: blue;
+}
+
+.album {
+  margin-left: 300px;
+  padding-top: inherit;
+  padding-bottom: 3rem;
+  background-color: #f7f7f7;
+}
+
+.card {
+  float: left;
+  width: 33.333%;
+  padding: .75rem;
+  margin-bottom: 2rem;
+  border: 0;
+}
+
+.card-text {
+  font-size: 15px;
+  overflow: hidden;
+  font-style:italic;
+}
+
+.title {
+  font-size: 25px
+  font-weight:bold;
+}
+
+.card-author {
+  font-size:15px;
+  font-weight:bold;
+}
+
+.card-rating {
+
+  font-size:15px;
+  font-weight:bold;
+}
+
+
+.card-price {
+  font-size:15px;
+  font-weight:bold;
+}
+
+img {
+  border: 1.5px solid black;
+  margin-bottom: 20px;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+label {
+  color: blue;
+}

@@ -109,19 +109,7 @@ nav.navbar.navbar-inverse.bottom {
     transition: 0.5s;
 }
 
-.book-cover
-{  
-    border:4px solid #021a40;
-    height: 500px;
-    width: 400px;  
-}
-.short-description
-{   
-    width: 250px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
+
 
 ul.nav.navbar-nav.navbar-right {
     margin-right: 0px;

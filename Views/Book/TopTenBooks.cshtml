@@ -4,14 +4,33 @@
     ViewData["Title"] = "Top Ten Books" ;
 }
 
+ <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">@ViewData["Title"]</h1>
+          <p class="lead text-muted">Our most popular books!</p>
+        </div>
+</section>
+
+	<div class="container">
+		 <div class="row">
     @foreach(var book in @Model)
     { 		
-		<h2>@book.Title</h2>
-		<img class="book-cover" src="@book.Image" alt="Not found">
-        <p>@book.Rating</p>
-		<p>@book.Author</p>
-		<p>@book.Price Kr</p>
-		<a href="#" class="btn btn-primary">Go somewhere</a>	
-		
+		<div class="album py-5 bg-light" align-items-center>
+			<div class="col-sm">
+					<h2 class-"title">@book.Title</h2>
+						<img class="card-img-top" src="@book.Image" alt="Not Found">
+							<p>ISBN: @book.ISBN</p>		
+							<p class= "card-text">@book.Description</p>	
+							<h5 class="card-author">Author: @book.Author</h5>
+							<h5 class="card-rating">Rating: @book.Rating</h5>
+							<h5 class="card-price">Price: @book.Price</h5>
+							<p>@book.ISBN</p>
+							 <div class="btn-group">
+								<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+								<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    		</div>
+					</div>
+				</div>
 	}
-	
+	</div>	
+</div>	

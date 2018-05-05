@@ -1,34 +1,57 @@
 @model List<TheBookCave.Models.ViewModels.BookListViewModel>
-
+<link rel="stylesheet" href="~/css/booklist.css"/>
 @{
     ViewData["Title"] = "Book Catalogue";
 }
-<h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
 
-<form id="genre" asp-controller="Book" asp-action="ListOfBooks" method="POST">
-	<input type="submit" name="genre" value="Fantasy"/>
-	<input type="submit" name="genre" value="Food & Fun"/>
-	<input type="submit" name="genre" value="Crime"/>
-	<input type="submit" name="genre" value="Health"/>
-	<input type="submit" name="genre" value="Personal development"/>
-	<input type="submit" name="genre" value="Children"/>
-	<input type="submit" name="genre" value="Star Wars"/>
-	<input type="submit" name="genre" value="Science & Geography"/>
-</form>
+ 
+ <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">@ViewData["Title"]</h1>
+          <p class="lead text-muted">List of all our books</p>
+        </div>
+</section>
+<div class="container-fluid">
+	<div class="genre-nav">
+	<form asp-controller="Book" asp-action="ListOfBooks" method="POST">
+		<label>Category</label>
+		<input type="submit"  name="genre" value="Fantasy"/>
+		<input type="submit"  name="genre" value="Food & Fun"/>
+		<input type="submit"  name="genre" value="Crime"/>
+		<input type="submit"  name="genre" value="Health"/>
+		<input type="submit"  name="genre" value="Personal development"/>
+		<input type="submit"  name="genre" value="Children"/>
+		<input type="submit"  name="genre" value="Star Wars"/>
+		<input type="submit"  name="genre" value="Science & Geography"/>
+		
+	</form>
+	</div>
+
+	<div class="row">
     @foreach(var book in @Model)
     { 		
-			<br>
-			<div class="grid-item">
-					<h2>@book.Title</h2>
-					<img class="book-cover" src="@book.Image" alt="Not found">
-					<p>@book.Author</p>
-					<p>@book.Price Kr</p>
-					<p>@book.Description</p>
-					<a href="#" class="btn btn-primary">Go somewhere</a>
-			</div>
-		
+			<div class="album py-5 bg-light" align-items-center>
+					<div class="col-md-4">
+							<h2 class-"title">@book.Title</h2>
+							<img class="card-img-top" src="@book.Image" alt="Not Found">
+							<p>ISBN: @book.ISBN</p>		
+							<p class= "card-text">@book.Description</p>	
+							<h5 class="card-author">Author: @book.Author</h5>
+							<h5 class="card-rating">Rating: @book.Rating</h5>
+							<h5 class="card-price">Price: @book.Price</h5>
+							<p>@book.ISBN</p>
+							 <div class="btn-group">
+								<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+								<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    		</div>
+					</div>
+				</div>
 	}
+	</div>
+</div>
+</div>
+
+
 
 
 

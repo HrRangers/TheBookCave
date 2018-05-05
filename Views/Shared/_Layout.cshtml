@@ -39,16 +39,16 @@
 </form>
     
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#" style="color:white"><span class="glyphicon glyphicon-user" style="color:aqua"></span> Sign Up</a></li>
-      <li><a href="#" style="color:white"><span class="glyphicon glyphicon-log-in" style="color:aqua"></span> Login</a></li>
+      <li><a asp-controller="User" asp-action="SignUp" style="color:white"><span class="glyphicon glyphicon-user" style="color:aqua"></span> Sign Up</a></li>
+      <li><a asp-controller="User" asp-action="LogIn" style="color:white"><span class="glyphicon glyphicon-log-in" style="color:aqua"></span> Login</a></li>
     </ul>
   </div>
 
     <nav class="navbar navbar-inverse bottom">
         <ul class="nav navbar-nav links">
-            <li><a id="list" class="navbuttons" asp-area="" asp-controller="Book" asp-action="ListOfBooks">List of Books</a></li>
+            <li><a id="list" class="navbuttons" asp-area="" asp-controller="Book" asp-action="ListOfBooks">Book Catalogue</a></li>
             <li><a class="navbuttons" asp-area="" asp-controller="Book" asp-action="TopTenBooks">Top Ten Books</a></li>
-            <li><a class="navbuttons" asp-area="" asp-controller="Book" asp-action="NewBooks">NewBooks</a></li>
+            <li><a class="navbuttons" asp-area="" asp-controller="Book" asp-action="NewBooks">New Arrivals</a></li>
             <li><a id="about" class="navbuttons" asp-area="" asp-controller="Book" asp-action="AboutUs">About us</a></li>
         </ul>
     </nav>
