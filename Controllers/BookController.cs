@@ -33,7 +33,7 @@ namespace TheBookCave.Controllers
             }
             else
             {   
-                var genrelistBooks= _bookRepo.GetBooksByGenre(genre);
+                var genrelistBooks = _bookRepo.GetBooksByGenre(genre);
                 return View(genrelistBooks);
             }      
         }
@@ -43,6 +43,21 @@ namespace TheBookCave.Controllers
             var books = _bookRepo.GetAllBooks();
             //return View("ListOfBooks");
             return View(books);
+        }
+        
+        [HttpGet]
+        public IActionResult BookDetails(string isbn)
+        {
+            if (isbn == null)
+            {
+                return View("Error");
+            }
+
+            var bookbyISBN = _bookRepo.GetBookByISBN(isbn);
+
+            return View(bookbyISBN);
+
+            
         }
         public IActionResult NewBooks()
         {

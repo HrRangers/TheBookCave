@@ -3,6 +3,7 @@ using System.Linq;
 using TheBookCave.Data;
 using TheBookCave.Models.ViewModels;
 
+
 namespace TheBookCave.Repositories
 {   
     public class BookRepo
@@ -43,12 +44,20 @@ namespace TheBookCave.Repositories
         }
         public List<BookListViewModel> GetBooksByGenre(string genre)
         {       
-
-                var genrelistBooks = (from g in GetAllBooks()
-                                       where(g.Genre.ToLower() == genre.ToLower())
-                                       select g).ToList();                        
+            var genrelistBooks = (from g in GetAllBooks()
+                            where (g.Genre.ToLower() == genre.ToLower())
+                            select g).ToList();                        
                 return genrelistBooks;
         }
+        public List<BookListViewModel> GetBookByISBN(string isbn)
+        {
+            var bookbyISBN = (from b in GetAllBooks()
+                        where (b.ISBN.ToLower() == isbn.ToLower())
+                        select b).ToList();
+            
+            return bookbyISBN;
+        }
+  
     }
 }
 
