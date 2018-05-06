@@ -70,7 +70,7 @@ namespace TheBookCave.Repositories
             var booksbyResult = (from b in GetAllBooks()
                                  where (b.Title.ToLower().Contains(searchString.ToLower())
                                         || b.Author.ToLower().Contains(searchString.ToLower())
-                                        || b.ISBN.ToLower().Contains(searchString.ToLower()))
+                                        || b.ISBN.Contains(searchString))
                                  select b).ToList();
             return booksbyResult;
         }
