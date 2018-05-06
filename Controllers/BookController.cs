@@ -26,7 +26,6 @@ namespace TheBookCave.Controllers
         [HttpPost]
         public IActionResult ListOfBooks(string genre)
         {   
-
             if (genre == null)
             {
                 return ListOfBooks();
@@ -34,8 +33,9 @@ namespace TheBookCave.Controllers
             else
             {   
                 var genrelistBooks = _bookRepo.GetBooksByGenre(genre);
-                return View(genrelistBooks);
+                return View(genrelistBooks);       
             }      
+     
         }
         [HttpGet]
         public IActionResult ListOfBooks()
@@ -45,6 +45,37 @@ namespace TheBookCave.Controllers
             return View(books);
         }
         
+        [HttpPost]
+        public IActionResult SortBooks(string sort)
+        {
+            var sortedBooks = _bookRepo.GetAllBooks();
+            if(sort == null)
+            {
+                 return ListOfBooks();
+            }
+            if(sort == "A to Z")
+            {
+                sortedBooks = _bookRepo.SortBooksAscending();
+            }
+            else if(sort == "Z to A")
+            {
+                sortedBooks = _bookRepo.SortBooksDescending();
+            }
+            else if(sort == "Lower prices")
+            {
+                 sortedBooks = _bookRepo.SortBooksLowest();
+            }
+            else if(sort == "Medium prices")
+            {
+                sortedBooks = _bookRepo.SortBooksMedium();
+            }
+            else if(sort == "Higher prices")
+            {
+                sortedBooks = _bookRepo.SortBooksHigest();
+            }     
+            return View(sortedBooks);
+       }
+
         [HttpGet]
         public IActionResult BookDetails(string isbn)
         {
@@ -56,13 +87,14 @@ namespace TheBookCave.Controllers
             var bookbyISBN = _bookRepo.GetBookByISBN(isbn);
 
             return View(bookbyISBN);
-
             
         }
         public IActionResult NewBooks()
         {
             return View("NewBooks");
         }
+        
+        [HttpGet]
         public IActionResult TopTenBooks()
         {   
             var toptenBooks = _bookRepo.GetTop10Books();

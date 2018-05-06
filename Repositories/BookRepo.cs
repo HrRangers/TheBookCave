@@ -57,7 +57,52 @@ namespace TheBookCave.Repositories
             
             return bookbyISBN;
         }
-  
+        public List<BookListViewModel> SortBooksAscending()
+        {
+            var sortedBooks = (from sb in GetAllBooks()
+                            orderby sb.Title
+                            ascending
+                            select sb).ToList();
+            return sortedBooks;
+        }
+
+        public List<BookListViewModel> SortBooksDescending()
+        {
+            var sortedBooks = (from sb in GetAllBooks()
+                            orderby sb.Title
+                            descending
+                            select sb).ToList();
+            return sortedBooks;
+        }
+
+
+        public List<BookListViewModel> SortBooksLowest()
+        {   
+
+            var sortedLowestBooks = (from sbl in GetAllBooks()
+                            orderby (sbl.Price <= 2000)
+                            descending
+                            select sbl).ToList();      
+                return sortedLowestBooks;                 
+           
+        }
+         public List<BookListViewModel> SortBooksMedium()
+         {  
+              var sortedMediumBooks = (from sbl in GetAllBooks()
+                            orderby(sbl.Price == 3000)
+                            select sbl).ToList();      
+            return sortedMediumBooks;                        
+         }
+        public List<BookListViewModel> SortBooksHigest()
+         {
+                 var sortedHigestBooks = (from sbl in GetAllBooks()
+                            orderby (sbl.Price)
+                            descending
+                            select sbl).ToList();      
+            
+            return sortedHigestBooks;                 
+        }
+          
     }
 }
 
