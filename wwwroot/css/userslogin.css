@@ -1,22 +1,22 @@
-*{
-    margin: 0; 
+* {
+    margin: 0;
     padding: 0;
 }
 
 .user-signin {
     background-color: rgb(151, 172, 194);
     border: none;
-    color:white;
+    color: white;
     padding: 14px 20px;
-    text-align:center;
+    text-align: center;
     font-size: 14px;
     cursor: pointer;
     width: 25%;
     border-radius: 12px;
 }
 
-.cancel{
-    background-color:red;
+.cancel {
+    background-color: red;
     color: white;
     padding: 14px 20px;
     margin: 8px 0px;
@@ -25,8 +25,9 @@
     width: 10%;
     opacity: 0.9;
 }
-.signup{
-	background-color:green;
+
+.signup {
+    background-color: green;
     color: white;
     padding: 14px 20px;
     margin: 8px 0px;
@@ -40,11 +41,12 @@ button:hover {
     opacity: 0.8;
 }
 
-.signupbox{
+.signupbox {
     text-align: center;
 }
-.login{
-    background-color:green;
+
+.login {
+    background-color: green;
     color: white;
     padding: 14px 20px;
     margin: 8px 0px;
@@ -53,9 +55,11 @@ button:hover {
     width: 10%;
     opacity: 0.9;
 }
-.center{
+
+.center {
     text-align: center;
 }
-.a{
-    text-align:center;
+
+.a {
+    text-align: center;
 }

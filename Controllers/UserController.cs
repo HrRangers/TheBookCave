@@ -15,11 +15,9 @@ namespace TheBookCave.Controllers
             return View("LogIn");
         }
 
-          public IActionResult SignUp()
+        public IActionResult SignUp()
         {
             return View("SignUp");
         }
-
-
-    }       
-}   
+    }
+}

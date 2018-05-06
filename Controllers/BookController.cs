@@ -11,9 +11,9 @@ using TheBookCave.Repositories;
 namespace TheBookCave.Controllers
 {
     public class BookController : Controller
-    {   
+    {
         private BookRepo _bookRepo;
-        
+
         public BookController()
         {
             _bookRepo = new BookRepo();
@@ -21,77 +21,77 @@ namespace TheBookCave.Controllers
 
         [HttpGet]
         public IActionResult Index()
-        {   
+        {
             var books = _bookRepo.GetAllBooks();
             return View(books);
         }
         [HttpPost]
         public IActionResult Index(string searchString)
-        {   
-            
-            if(!String.IsNullOrEmpty(searchString))
+        {
+
+            if (!String.IsNullOrEmpty(searchString))
             {
-                 var resultBooks = _bookRepo.GetBooksBySearch(searchString);
-                 return View(resultBooks);
+                var resultBooks = _bookRepo.GetBooksBySearch(searchString);
+                return View(resultBooks);
             }
             else
             {
-                return View("NotFound");     
-            }       
+                return View("NotFound");
+            }
         }
 
         [HttpPost]
         public IActionResult ListOfBooks(string genre)
-        {   
+        {
             if (genre == null)
             {
                 return ListOfBooks();
             }
             else
-            {   
+            {
                 var genrelistBooks = _bookRepo.GetBooksByGenre(genre);
-                return View(genrelistBooks);       
-            }      
-     
+                return View(genrelistBooks);
+            }
+
         }
         [HttpGet]
         public IActionResult ListOfBooks()
-        {   
+        {
             var books = _bookRepo.GetAllBooks();
             //return View("ListOfBooks");
             return View(books);
         }
-        
+
         [HttpPost]
         public IActionResult SortBooks(string sort)
         {
             var sortedBooks = _bookRepo.GetAllBooks();
-            if(sort == null)
+            if (sort == null)
             {
-                 return ListOfBooks();
+                return ListOfBooks();
             }
-            if(sort == "A to Z")
+            if (sort == "A to Z")
             {
                 sortedBooks = _bookRepo.SortBooksAscending();
             }
-            else if(sort == "Z to A")
+            else if (sort == "Z to A")
             {
                 sortedBooks = _bookRepo.SortBooksDescending();
             }
-            else if(sort == "Lower prices")
+            else if (sort == "Lower prices")
             {
-                 sortedBooks = _bookRepo.SortBooksLowest();
+                sortedBooks = _bookRepo.SortBooksLowest();
             }
-            else if(sort == "Medium prices")
+            else if (sort == "Medium prices")
             {
                 sortedBooks = _bookRepo.SortBooksMedium();
             }
-            else if(sort == "Higher prices")
+            else if (sort == "Higher prices")
             {
                 sortedBooks = _bookRepo.SortBooksHigest();
-            }     
+            }
             return View(sortedBooks);
-       }
+        }
 
         [HttpGet]
         public IActionResult BookDetails(string isbn)
@@ -104,17 +104,17 @@ namespace TheBookCave.Controllers
             var bookbyISBN = _bookRepo.GetBookByISBN(isbn);
 
             return View(bookbyISBN);
-            
+
         }
         public IActionResult NewBooks()
         {
             var newestBooks = _bookRepo.GetNewArrivals();
             return View(newestBooks);
         }
-        
+
         [HttpGet]
         public IActionResult TopTenBooks()
-        {   
+        {
             var toptenBooks = _bookRepo.GetTop10Books();
             return View(toptenBooks);
         }
@@ -122,7 +122,7 @@ namespace TheBookCave.Controllers
         {
             return View("AboutUs");
         }
-         public IActionResult ContactUs()
+        public IActionResult ContactUs()
         {
             return View("ContactUs");
         }

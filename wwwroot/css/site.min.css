@@ -1,37 +1,39 @@
-body{
-padding-top:150px;
+body {
+    padding-top: 150px;
 }
 
-.carousel-caption p{
-font-size:20px;
-line-height:1.4;
-}
-.carousel-inner .item img[src$=".svg"]{
-width:100%
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
 }
 
-div.container-fluid{
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%
+}
+
+div.container-fluid {
     padding-right: 0px;
     padding-left: 0px;
 }
 
-@media screen and (max-width:767px){
-.carousel-caption{
-display:none}
+@media screen and (max-width:767px) {
+    .carousel-caption {
+        display: none
+    }
 }
 
-ul.nav.navbar-nav.links{
+ul.nav.navbar-nav.links {
     float: left;
     width: 100%;
 }
 
-ul.nav.navbar-nav.links li{
+ul.nav.navbar-nav.links li {
     float: left;
     width: 25%;
     text-align: center;
 }
 
-.navbar{
+.navbar {
     background-color: #dddddd;
     border: none;
     margin-bottom: 0px;
@@ -39,12 +41,11 @@ ul.nav.navbar-nav.links li{
     border-bottom-right-radius: 10px;
 }
 
-.navbar .navbar-logo a,
-.navbar .navbar-nav li a{
+.navbar .navbar-logo a, .navbar .navbar-nav li a {
     color: #000000;
 }
 
-#list{
+#list {
     border-bottom-left-radius: 10px;
 }
 
@@ -52,29 +53,30 @@ ul.nav.navbar-nav.links li{
     border-bottom-right-radius: 10px;
 }
 
-.container-fluid.topnav{
+.container-fluid.topnav {
     background-color: black;
 }
 
 .navbar-header {
-    width: 170px; 
+    width: 170px;
 }
 
-form.navbar-form.navbar-left.searchbar{
+form.navbar-form.navbar-left.searchbar {
     float: left;
     margin-left: 15%;
     padding: 0px;
 }
 
-button.btn.btn-default.search{
+button.btn.btn-default.search {
     background-color: black;
     border: none;
 }
 
-i.glyphicon.glyphicon-search:hover{
+i.glyphicon.glyphicon-search:hover {
     color: white;
 }
-i.glyphicon.glyphicon-search{
+
+i.glyphicon.glyphicon-search {
     color: aqua;
 }
 
@@ -102,14 +104,11 @@ nav.navbar.navbar-inverse.bottom {
     min-height: 20px;
 }
 
-.navbar .navbar-nav li a:hover{
-
+.navbar .navbar-nav li a:hover {
     color: aqua;
     background-color: black;
     transition: 0.5s;
 }
-
-
 
 ul.nav.navbar-nav.navbar-right {
     margin-right: 0px;
@@ -123,9 +122,8 @@ ul.nav.navbar-nav.navbar-right li a {
     height: 100%;
 }
 
-ul.nav.navbar-nav.navbar-right li a:hover{
+ul.nav.navbar-nav.navbar-right li a:hover {
     position: relative;
     color: black !important;
-    background-color:  #dddddd;
-
+    background-color: #dddddd;
 }
