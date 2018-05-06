@@ -91,7 +91,8 @@ namespace TheBookCave.Controllers
         }
         public IActionResult NewBooks()
         {
-            return View("NewBooks");
+            var newestBooks = _bookRepo.GetNewArrivals();
+            return View(newestBooks);
         }
         
         [HttpGet]

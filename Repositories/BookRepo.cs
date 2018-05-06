@@ -42,6 +42,15 @@ namespace TheBookCave.Repositories
                         select b).Take(10).ToList();
              return top10books;
         }
+        public List<BookListViewModel> GetNewArrivals()
+        {
+             var newestBooks = (from b in GetAllBooks()
+                        orderby b.Id
+                        descending
+                        select b).Take(5).ToList();
+             return newestBooks;
+        }
+
         public List<BookListViewModel> GetBooksByGenre(string genre)
         {       
             var genrelistBooks = (from g in GetAllBooks()
