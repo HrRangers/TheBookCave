@@ -66,6 +66,16 @@ namespace TheBookCave.Repositories
             
             return bookbyISBN;
         }
+
+       public List<BookListViewModel> GetBooksBySearch(string searchString)
+       {    
+            var booksbyResult = (from b in GetAllBooks()
+                        where (b.Title.ToLower().Contains(searchString.ToLower())
+                               || b.Author.ToLower().Contains(searchString.ToLower())
+                               || b.ISBN.ToLower().Contains(searchString.ToLower()))
+                        select b).ToList();
+            return booksbyResult;
+        }
         public List<BookListViewModel> SortBooksAscending()
         {
             var sortedBooks = (from sb in GetAllBooks()

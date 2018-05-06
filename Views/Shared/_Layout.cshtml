@@ -27,9 +27,9 @@
 		<img src="~/images/TheBookCaveLogo.jpg" alt="logo.png"></a>
     </div>
 
-    <form class="navbar-form navbar-left searchbar" action="/action_page.php">
+    <form class="navbar-form navbar-left searchbar" asp-controller="Book" asp-action="Index" method="POST">
   <div class="input-group">
-    <input type="text" class="form-control" placeholder="Looking for a book?">
+    <input type="text" class="form-control" name="SearchString" placeholder="Looking for a book?">
     <div class="input-group-btn">
       <button class="btn btn-default search" type="submit">
         <i class="glyphicon glyphicon-search"></i>

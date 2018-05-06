@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using TheBookCave.Models;
 using TheBookCave.Repositories;
 
@@ -18,9 +19,25 @@ namespace TheBookCave.Controllers
             _bookRepo = new BookRepo();
         }
 
+        [HttpGet]
         public IActionResult Index()
-        {
-            return View();
+        {   
+            var books = _bookRepo.GetAllBooks();
+            return View(books);
+        }
+        [HttpPost]
+        public IActionResult Index(string searchString)
+        {   
+            
+            if(!String.IsNullOrEmpty(searchString))
+            {
+                 var resultBooks = _bookRepo.GetBooksBySearch(searchString);
+                 return View(resultBooks);
+            }
+            else
+            {
+                return View("NotFound");     
+            }       
         }
 
         [HttpPost]
