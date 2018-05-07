@@ -1,0 +1,25 @@
+@model List<TheBookCave.Models.ViewModels.BookListViewModel>
+
+@{
+    ViewData["Title"] = "Book";
+}
+<link rel="stylesheet" href="~/css/bookdetails.css"/>
+@foreach(var book in @Model)
+{ 		
+	<div class="album py-5 bg-light" align-items-center>
+		<div class="col-sm">
+			<a asp-controller="Book" asp-action="BookDetails" asp-route-isbn="@book.ISBN"><img class="card-img-top" src="@book.Image" alt="Not Found"></a>
+			<h2 class-"title">@book.Title</h2>
+			<p class= "card-text">@book.Description</p>
+			<h5 class="card-author">Author: @book.Author</h5>
+			<h5 class="card-rating">Rating: @book.Rating</h5>
+			<h5 class="card-price">Price: @book.Price</h5>
+			<h5 class="card-price">Review: @book.Review</h5>
+			<p>ISBN: @book.ISBN</p>
+			<div class="btn-group">
+				<a asp-controller="book" asp-action="ListOfBooks"><button type="button" class="btn btn-sm btn-outline-secondary">Go back</button></a>
+				<button type="button" class="btn btn-sm btn-outline-secondary">Add to cart</button>
+			</div>
+		</div>
+	</div>
+}
