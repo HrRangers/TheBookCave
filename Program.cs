@@ -39,7 +39,7 @@ namespace TheBookCave
                 var intialBooks = new List<Book>()
                 {   
                     new Book {
-                        ISBN = "9780006",
+                        ISBN = "1111111111111",
                         Title = "A Game of Thrones : Book 1 of A Song of Ice and Fire",
                         Author = "George R. R. Martin",
                         Genre = "Fantasy",

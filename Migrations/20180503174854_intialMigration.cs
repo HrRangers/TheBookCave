@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace TheBookCave.Migrations
 {
-    public partial class initalMigration : Migration
+    public partial class intialMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -18,10 +18,10 @@ namespace TheBookCave.Migrations
                     Author = table.Column<string>(nullable: true),
                     Description = table.Column<string>(nullable: true),
                     Genre = table.Column<string>(nullable: true),
-                    ISBN = table.Column<int>(nullable: false),
+                    ISBN = table.Column<string>(nullable: true),
                     Image = table.Column<string>(nullable: true),
                     Price = table.Column<int>(nullable: false),
-                    Rating = table.Column<string>(nullable: true),
+                    Rating = table.Column<int>(nullable: false),
                     Review = table.Column<string>(nullable: true),
                     Title = table.Column<string>(nullable: true)
                 },

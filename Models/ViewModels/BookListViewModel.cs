@@ -7,7 +7,7 @@ namespace TheBookCave.Models.ViewModels
         public int Id { get; set; }
         
         /// Bok tharf ad ISBN numer
-        public int ISBN { get; set; }
+        public string ISBN { get; set; }
 
         /// Bok tharf ad hafa Titill
         public string Title { get; set; }

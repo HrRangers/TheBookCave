@@ -31,13 +31,13 @@ namespace TheBookCave.Migrations
 
                     b.Property<string>("Genre");
 
-                    b.Property<int>("ISBN");
+                    b.Property<string>("ISBN");
 
                     b.Property<string>("Image");
 
                     b.Property<int>("Price");
 
-                    b.Property<string>("Rating");
+                    b.Property<int>("Rating");
 
                     b.Property<string>("Review");
 
