@@ -1,3 +1,6 @@
+
+@model authentication_repo.Models.ViewModels.RegisterViewModel
+
 @{
     ViewData["Title"] = "Login";
 }
@@ -13,16 +16,16 @@
     <p class="mb-0">“Good friends, good books, and a sleepy conscience: this is the ideal life.”.</p>
     <footer class="blockquote-footer">Mark Twain</footer>
 </blockquote>
-<form class=center>
+<form asp-action="Login" aps-controller="User" class="center">
     <fieldset>
-        <label for="username">Username: </label>
-        <input id="user-login-username" type="text" placeholder="Enter Username" name="username"><br>
+        <label for="username">Email: </label>
+        <input id="user-login-username" asp-for="Email" type="E-mail" placeholder="Enter email addrfess" name="username"><br>
         <label for="passsword">Password: </label>
         <input id="user-login-password" type="password" placeholder="Enter Password" name="psw"><br>
-        <button id="user-login-cancel" type="submit" class="cancel" asp-action= "UserLoginIndex">Cancel</button>
-        <button id="user-login-login" type="submit" class="login">Login</button><br>
         <label>
-        <input id="user-login-remember" type="checkbox" checked="checked" name="remember"> Remember me
+        <input id="user-login-remember" type="checkbox" asp-for="RememberMe" name="remember"> Remember me
         </label> 
+         <button id="user-login-cancel" type="submit" class="cancel" asp-action= "UserLoginIndex">Cancel</button>
+        <button id="user-login-login" type="submit" class="login" value="Login">Login</button><br>
     </fieldset>
 </form>
