@@ -30,8 +30,8 @@
 .album {
   margin-left: 300px;
   padding-top: inherit;
-  padding-bottom: 3rem;
-  background-color: #f7f7f7;
+  padding-bottom: inherit;
+  background-color: none;
 }
 
 .card {
@@ -49,7 +49,7 @@
 }
 
 .title {
-  font-size: 25px;
+  font-size: 15px;
   font-weight: bold;
 }
 
@@ -70,8 +70,8 @@
 
 img {
   border: 1.5px solid black;
-  margin-bottom: 20px;
-  max-width: 100%;
+  width:150px;
+  height:200px;
   border-radius: 8px;
 }
 
@@ -106,4 +106,23 @@ label:hover {
   border: none;
   background-color: none;
   color: blue;
+}
+div.btn-group a{
+    margin: 10px;
+}
+div.btn-group{
+    position: absolute;
+    bottom: 40px;
+}
+p.card-text{
+    display:none;
+}
+
+div.col-md-4{
+    width: 200px; 
+    height:490px;
+    word-wrap: break-word;
+}
+p{
+    display: none;
 }
