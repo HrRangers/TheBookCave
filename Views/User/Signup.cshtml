@@ -1,0 +1,35 @@
+@model authentication_repo.Models.ViewModels.RegisterViewModel
+
+@{
+    ViewData["Title"] = "Signup";
+}
+
+<link rel="stylesheet" href="~/css/userslogin.css"/>
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1 class="jumbotron-heading">Join the BookCave!</h1>
+        <p class="lead text-muted">Sign up!</p>
+    </div>
+</section>
+<blockquote class="blockquote text-center">
+    <p class="mb-0">“So many books, so little time.”</p>
+    <footer class="blockquote-footer">Frank Zappa</footer>
+</blockquote>
+<fieldset>
+    <form  asp-action="SignUp" asp-controller="User" class ="signupbox"> 
+        <label for="email">Email:</label>
+        <input type="email" asp-for="Email" placeholder="Enter your email."/>
+        <label for="name">First Name: </label>
+        <input type="text" asp-for="FirstName" placeholder="First name">
+        <br>
+        <label>Last Name: </label>
+        <input type="text" asp-for="LastName" placeholder="Last name">
+        <br
+        <label for="password">Password:</label>
+        <br>
+        <input type="password" asp-for="Password" placeholder="Enter Password">
+        <br>
+        <button type="submit" class="cancel" asp-action= "UserLoginIndex">Cancel</button>
+        <button type="submit" class="signup">Sign Up!</button>
+    </form>
+</fieldset>
