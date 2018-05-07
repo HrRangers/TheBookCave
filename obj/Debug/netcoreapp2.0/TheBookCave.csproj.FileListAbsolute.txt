@@ -1,0 +1,40 @@
+C:\Users\Hartiparti\Desktop\TheBookCave-master (1)\TheBookCave-master\bin\Debug\netcoreapp2.0\TheBookCave.deps.json
+C:\Users\Hartiparti\Desktop\TheBookCave-master (1)\TheBookCave-master\bin\Debug\netcoreapp2.0\TheBookCave.runtimeconfig.json
+C:\Users\Hartiparti\Desktop\TheBookCave-master (1)\TheBookCave-master\bin\Debug\netcoreapp2.0\TheBookCave.runtimeconfig.dev.json
+C:\Users\Hartiparti\Desktop\TheBookCave-master (1)\TheBookCave-master\bin\Debug\netcoreapp2.0\TheBookCave.dll
+C:\Users\Hartiparti\Desktop\TheBookCave-master (1)\TheBookCave-master\bin\Debug\netcoreapp2.0\TheBookCave.pdb
+C:\Users\Hartiparti\Desktop\TheBookCave-master (1)\TheBookCave-master\obj\Debug\netcoreapp2.0\TheBookCave.csproj.CoreCompileInputs.cache
+C:\Users\Hartiparti\Desktop\TheBookCave-master (1)\TheBookCave-master\obj\Debug\netcoreapp2.0\TheBookCave.AssemblyInfoInputs.cache
+C:\Users\Hartiparti\Desktop\TheBookCave-master (1)\TheBookCave-master\obj\Debug\netcoreapp2.0\TheBookCave.AssemblyInfo.cs
+C:\Users\Hartiparti\Desktop\TheBookCave-master (1)\TheBookCave-master\obj\Debug\netcoreapp2.0\TheBookCave.dll
+C:\Users\Hartiparti\Desktop\TheBookCave-master (1)\TheBookCave-master\obj\Debug\netcoreapp2.0\TheBookCave.pdb
+C:\Users\hartmann14\Desktop\Currbuild\TheBookCave-master (1)\TheBookCave-master\bin\Debug\netcoreapp2.0\TheBookCave.deps.json
+C:\Users\hartmann14\Desktop\Currbuild\TheBookCave-master (1)\TheBookCave-master\bin\Debug\netcoreapp2.0\TheBookCave.runtimeconfig.json
+C:\Users\hartmann14\Desktop\Currbuild\TheBookCave-master (1)\TheBookCave-master\bin\Debug\netcoreapp2.0\TheBookCave.runtimeconfig.dev.json
+C:\Users\hartmann14\Desktop\Currbuild\TheBookCave-master (1)\TheBookCave-master\bin\Debug\netcoreapp2.0\TheBookCave.dll
+C:\Users\hartmann14\Desktop\Currbuild\TheBookCave-master (1)\TheBookCave-master\bin\Debug\netcoreapp2.0\TheBookCave.pdb
+C:\Users\hartmann14\Desktop\Currbuild\TheBookCave-master (1)\TheBookCave-master\obj\Debug\netcoreapp2.0\TheBookCave.csproj.CoreCompileInputs.cache
+C:\Users\hartmann14\Desktop\Currbuild\TheBookCave-master (1)\TheBookCave-master\obj\Debug\netcoreapp2.0\TheBookCave.AssemblyInfoInputs.cache
+C:\Users\hartmann14\Desktop\Currbuild\TheBookCave-master (1)\TheBookCave-master\obj\Debug\netcoreapp2.0\TheBookCave.AssemblyInfo.cs
+C:\Users\hartmann14\Desktop\Currbuild\TheBookCave-master (1)\TheBookCave-master\obj\Debug\netcoreapp2.0\TheBookCave.dll
+C:\Users\hartmann14\Desktop\Currbuild\TheBookCave-master (1)\TheBookCave-master\obj\Debug\netcoreapp2.0\TheBookCave.pdb
+C:\Users\hartmann14\Desktop\Currbuild\TheBookCave-master-master\TheBookCave-master\bin\Debug\netcoreapp2.0\TheBookCave.deps.json
+C:\Users\hartmann14\Desktop\Currbuild\TheBookCave-master-master\TheBookCave-master\bin\Debug\netcoreapp2.0\TheBookCave.runtimeconfig.json
+C:\Users\hartmann14\Desktop\Currbuild\TheBookCave-master-master\TheBookCave-master\bin\Debug\netcoreapp2.0\TheBookCave.runtimeconfig.dev.json
+C:\Users\hartmann14\Desktop\Currbuild\TheBookCave-master-master\TheBookCave-master\bin\Debug\netcoreapp2.0\TheBookCave.dll
+C:\Users\hartmann14\Desktop\Currbuild\TheBookCave-master-master\TheBookCave-master\bin\Debug\netcoreapp2.0\TheBookCave.pdb
+C:\Users\hartmann14\Desktop\Currbuild\TheBookCave-master-master\TheBookCave-master\obj\Debug\netcoreapp2.0\TheBookCave.csproj.CoreCompileInputs.cache
+C:\Users\hartmann14\Desktop\Currbuild\TheBookCave-master-master\TheBookCave-master\obj\Debug\netcoreapp2.0\TheBookCave.AssemblyInfoInputs.cache
+C:\Users\hartmann14\Desktop\Currbuild\TheBookCave-master-master\TheBookCave-master\obj\Debug\netcoreapp2.0\TheBookCave.AssemblyInfo.cs
+C:\Users\hartmann14\Desktop\Currbuild\TheBookCave-master-master\TheBookCave-master\obj\Debug\netcoreapp2.0\TheBookCave.dll
+C:\Users\hartmann14\Desktop\Currbuild\TheBookCave-master-master\TheBookCave-master\obj\Debug\netcoreapp2.0\TheBookCave.pdb
+C:\Users\hartmann14\Desktop\3ViknaGit\TheBookCave\bin\Debug\netcoreapp2.0\TheBookCave.deps.json
+C:\Users\hartmann14\Desktop\3ViknaGit\TheBookCave\bin\Debug\netcoreapp2.0\TheBookCave.runtimeconfig.json
+C:\Users\hartmann14\Desktop\3ViknaGit\TheBookCave\bin\Debug\netcoreapp2.0\TheBookCave.runtimeconfig.dev.json
+C:\Users\hartmann14\Desktop\3ViknaGit\TheBookCave\bin\Debug\netcoreapp2.0\TheBookCave.dll
+C:\Users\hartmann14\Desktop\3ViknaGit\TheBookCave\bin\Debug\netcoreapp2.0\TheBookCave.pdb
+C:\Users\hartmann14\Desktop\3ViknaGit\TheBookCave\obj\Debug\netcoreapp2.0\TheBookCave.csproj.CoreCompileInputs.cache
+C:\Users\hartmann14\Desktop\3ViknaGit\TheBookCave\obj\Debug\netcoreapp2.0\TheBookCave.AssemblyInfoInputs.cache
+C:\Users\hartmann14\Desktop\3ViknaGit\TheBookCave\obj\Debug\netcoreapp2.0\TheBookCave.AssemblyInfo.cs
+C:\Users\hartmann14\Desktop\3ViknaGit\TheBookCave\obj\Debug\netcoreapp2.0\TheBookCave.dll
+C:\Users\hartmann14\Desktop\3ViknaGit\TheBookCave\obj\Debug\netcoreapp2.0\TheBookCave.pdb
