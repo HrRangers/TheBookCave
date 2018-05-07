@@ -12,16 +12,19 @@
     <p class="mb-0">“Good friends, good books, and a sleepy conscience: this is the ideal life.”.</p>
     <footer class="blockquote-footer">Mark Twain</footer>
 </blockquote>
-    
+      <div class="d-flex justify-content-center align-items-center container ">  
+          <div class="row ">
     <fieldset>
         <legend>Login</legend>
     <form asp-action="LogIn" aps-controller="User" class="form-horizontal">
+       
+
     <div class="form-group">
-        <div class="col-xs-2">
+
         <label for="input-email">Email address</label>
         <input type="email" asp-for="Email" class="form-control" id="input-email" aria-describedby="emailHelp" placeholder="Enter email" >
         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-        </div>
+     
     </div>
     <div class="form-group">
         <label for="input-password">Password</label>
@@ -35,3 +38,5 @@
     <button type="submit" class="btn btn-primary" value="LogIn">Log in</button>
     </form>
     </fieldset>
+</div>
+</div>
