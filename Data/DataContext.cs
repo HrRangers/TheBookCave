@@ -6,6 +6,9 @@ namespace TheBookCave.Data
     public class DataContext : DbContext
     {   
         public DbSet<Book> Books { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<ShippingAddress> ShippingAddress { get; set; }
+        public DbSet<Order> Orders { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder     /// Hér kemur linkur fyrir SQL server. 

@@ -4,16 +4,12 @@ namespace TheBookCave.Models.EntityModels
     {
         /// Order tharf ad hafa ID. Gagnagrunnur gefur Id
         public int Id { get; set; }
-
         /// Order tharf ad hafa verd
-        public int OrderPrice { get; set; }
-
+        public long OrderPrice { get; set; }
         /// Order tharf ad hafa fjölda af pöntunum
-        public int Quantity { get; set; }
-
-        /// Order tharf ad hafa Bókanúmer
         public int BookId { get; set; }
-
+        public int UserID { get; set; }
+        public int ShippingID { get; set; }     
     }
 
 }
