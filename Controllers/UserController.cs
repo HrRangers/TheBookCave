@@ -44,7 +44,7 @@ namespace authentication_repo.Controllers
                 /// 
                 await _userManager.AddClaimAsync(user, new Claim("Name", $"{model.FirstName} {model.LastName}"));
                 await _signInManager.SignInAsync(user, false);
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index");
 
             }
             return View();
@@ -58,7 +58,7 @@ namespace authentication_repo.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]   
-        public async Task<IActionResult> LogIn(LoginviewModel model)
+        public async Task<IActionResult> LogIn(LoginViewModel model)
         {
             if(!ModelState.IsValid) {return View(); }
             var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, false);
@@ -74,7 +74,7 @@ namespace authentication_repo.Controllers
         public async Task<IActionResult> LogOut()
         {
             await _signInManager.SignOutAsync();
-            return RedirectToAction("Login", "Account");
+            return RedirectToAction("LogIn", "User");
         }   
 
         public IActionResult AccessDenied()

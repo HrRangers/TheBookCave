@@ -36,7 +36,7 @@ namespace TheBookCave.Controllers
             }
             else
             {
-                return View("NotFound");
+                return RedirectToAction("Index");
             }
         }
 

@@ -1,7 +1,7 @@
 @model authentication_repo.Models.ViewModels.RegisterViewModel
 
 @{
-    ViewData["Title"] = "Login";
+    ViewData["Title"] = "Signup";
 }
 
 <link rel="stylesheet" href="~/css/userslogin.css"/>
@@ -15,21 +15,32 @@
     <p class="mb-0">“So many books, so little time.”</p>
     <footer class="blockquote-footer">Frank Zappa</footer>
 </blockquote>
-<fieldset>
-    <form  asp-action="Register" asp-controller="User" class ="signupbox"> 
-        <label for="email">Email</label>
-        <input type="email" asp-for="Email" placeholder="Enter your email."/>
-        <label for="name">Name</label>
-        <input type="text" placeholder="First name*"name="name">
-        <br>
-        <label for="name"></label>
-        <input type="text" placeholder="Last name"name="name">
-        <br
-        <label for="password">Password</label>
-        <br>
-        <input type="password" placeholder="Enter Password" name="psw">
-        <br>
-        <button id="user-signup-cancel" type="submit" class="cancel" asp-action= "UserLoginIndex">Cancel</button>
-        <button id="user-signup-submit" type="submit" class="signup">Sign Up</button>
+ <div class="d-flex justify-content-center align-items-center container ">  
+   <div class="row ">
+    <fieldset>
+        <legend>Sign Up</legend>
+    <form asp-action="SignUp" asp-controller="User"  class="form-horizontal">
+       
+
+    <div class="form-group">
+
+        <label for="input-email">Email address</label>
+        <input type="email" asp-for="Email" class="form-control" id="input-email" aria-describedby="emailHelp" placeholder="Enter your email" >
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+     
+    </div>
+    <div class="form-group">
+        <label for="input-password">First Name</label>
+        <input type="text" asp-for="FirstName" class="form-control" placeholder="First name">
+		<label>Last Name: </label>
+        <input type="text" asp-for="LastName"  class="form-control" placeholder="Last name">
+		<Label>Password:</Label>
+        <input type="password" asp-for="Password" class="form-control"  id="input-password" placeholder="Password">
+    </div>
+
+		<button type="submit" class="btn btn-primary" asp-action= "Index">Cancel</button>
+        <button type="submit" class="btn btn-primary">Sign Up!</button>
     </form>
-</fieldset>
+    </fieldset>
+</div>
+</div>

@@ -34,10 +34,10 @@
                         </div>
                     </div>
                 </form>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a asp-controller="User" asp-action="SignUp" style="color:white"><span class="glyphicon glyphicon-user" style="color:aqua"></span> Sign Up</a></li>
-                    <li><a asp-controller="User" asp-action="LogIn" style="color:white"><span class="glyphicon glyphicon-log-in" style="color:aqua"></span> Login</a></li>
-                </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                     <li><a asp-controller="Cart" asp-action="ShoppingCart"><span style="color:white" class="glyphicon glyphicon-shopping-cart"></span></a></li>l
+                 </ul>
+              @await Html.PartialAsync("_LoginPartial")
             </div>
             <nav class="navbar navbar-inverse bottom">
                 <ul class="nav navbar-nav links">

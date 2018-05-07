@@ -13,6 +13,11 @@ namespace TheBookCave.Controllers
     [Authorize]
     public class CartController : Controller
     {
+           
+        public IActionResult ShoppingCart()
+        {
+            return View("ShoppingCart");
+        }
 
     }
 }

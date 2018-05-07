@@ -1,31 +1,42 @@
 
-@model authentication_repo.Models.ViewModels.RegisterViewModel
+@model authentication_repo.Models.ViewModels.LoginViewModel
+
+<link rel="stylesheet" href="~/css/userslogin.css"/>
 
 @{
     ViewData["Title"] = "Login";
 }
 
-<link rel="stylesheet" href="~/css/userslogin.css"/>
-<section class="jumbotron text-center">
-    <div class="container">
-        <h1 class="jumbotron-heading">There is no friend as loyal as a book</h1>
-        <p class="lead text-muted">Login</p>
-    </div>
-</section>
+
 <blockquote class="blockquote text-center">
     <p class="mb-0">“Good friends, good books, and a sleepy conscience: this is the ideal life.”.</p>
     <footer class="blockquote-footer">Mark Twain</footer>
 </blockquote>
-<form asp-action="Login" aps-controller="User" class="center">
+      <div class="d-flex justify-content-center align-items-center container ">  
+          <div class="row ">
     <fieldset>
-        <label for="username">Email: </label>
-        <input id="user-login-username" asp-for="Email" type="E-mail" placeholder="Enter email addrfess" name="username"><br>
-        <label for="passsword">Password: </label>
-        <input id="user-login-password" type="password" placeholder="Enter Password" name="psw"><br>
-        <label>
-        <input id="user-login-remember" type="checkbox" asp-for="RememberMe" name="remember"> Remember me
-        </label> 
-         <button id="user-login-cancel" type="submit" class="cancel" asp-action= "UserLoginIndex">Cancel</button>
-        <button id="user-login-login" type="submit" class="login" value="Login">Login</button><br>
+        <legend>Login</legend>
+    <form asp-action="LogIn" aps-controller="User" class="form-horizontal">
+       
+
+    <div class="form-group">
+
+        <label for="input-email">Email address</label>
+        <input type="email" asp-for="Email" class="form-control" id="input-email" aria-describedby="emailHelp" placeholder="Enter email" >
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+     
+    </div>
+    <div class="form-group">
+        <label for="input-password">Password</label>
+        <input type="password" asp-for="Password" class="form-control"  id="input-password" placeholder="Password">
+    </div>
+    <div class="form-check">
+        <input type="checkbox" class="form-check-input"  asp-for="RememberMe" id="input-remember">
+        <label class="form-check-label" for="input-remember">Remember me</label>
+    </div>
+    <button type="submit" class="btn btn-primary" asp-controller="Book" class="cancel" asp-action= "Index" value="Cancel">Cancel</button>
+    <button type="submit" class="btn btn-primary" value="LogIn">Log in</button>
+    </form>
     </fieldset>
-</form>
+</div>
+</div>
