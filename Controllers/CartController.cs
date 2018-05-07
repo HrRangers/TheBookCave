@@ -19,5 +19,10 @@ namespace TheBookCave.Controllers
             return View("ShoppingCart");
         }
 
+        public IActionResult AccessDenied()
+        {
+            return RedirectToAction("LogIn", "User");
+        }
+
     }
 }

@@ -44,7 +44,7 @@ namespace authentication_repo.Controllers
                 /// 
                 await _userManager.AddClaimAsync(user, new Claim("Name", $"{model.FirstName} {model.LastName}"));
                 await _signInManager.SignInAsync(user, false);
-                return RedirectToAction("Index");
+                return RedirectToAction("Register");
 
             }
             return View();
@@ -64,7 +64,7 @@ namespace authentication_repo.Controllers
             var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, false);
             if(result.Succeeded)
             {
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Book");
             }
             return View();
         }
@@ -76,10 +76,20 @@ namespace authentication_repo.Controllers
             await _signInManager.SignOutAsync();
             return RedirectToAction("LogIn", "User");
         }   
+        [HttpPost]
+        public IActionResult UserRegister()
+        {
+            
+            return View();
+        }
+        public IActionResult UserAccount()
+        {
+            return View();
+        }
 
         public IActionResult AccessDenied()
         {
-            return View();
+            return RedirectToAction("LogIn", "User");
         }
     }
 }
