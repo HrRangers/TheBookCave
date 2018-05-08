@@ -12538,47 +12538,33 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
-    "C:\\Users\\Hartiparti\\.nuget\\packages\\": {},
+    "C:\\Users\\hartmann14\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
-=======
-    "/Users/soleybirgisdottir/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
->>>>>>> 4141a84f7630d5c1df8f53684ed84a516a1677a0
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\Hartiparti\\Desktop\\Git\\TheBookCave\\TheBookCave.csproj",
+      "projectUniqueName": "C:\\Users\\hartmann14\\Downloads\\TheBookCave-master\\TheBookCave-master\\TheBookCave.csproj",
       "projectName": "TheBookCave",
-      "projectPath": "C:\\Users\\Hartiparti\\Desktop\\Git\\TheBookCave\\TheBookCave.csproj",
-      "packagesPath": "C:\\Users\\Hartiparti\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Hartiparti\\Desktop\\Git\\TheBookCave\\obj\\",
+      "projectPath": "C:\\Users\\hartmann14\\Downloads\\TheBookCave-master\\TheBookCave-master\\TheBookCave.csproj",
+      "packagesPath": "C:\\Users\\hartmann14\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\hartmann14\\Downloads\\TheBookCave-master\\TheBookCave-master\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Hartiparti\\AppData\\Roaming\\NuGet\\NuGet.Config"
-=======
-      "projectUniqueName": "/Users/soleybirgisdottir/Desktop/TheBookCave/TheBookCave.csproj",
-      "projectName": "TheBookCave",
-      "projectPath": "/Users/soleybirgisdottir/Desktop/TheBookCave/TheBookCave.csproj",
-      "packagesPath": "/Users/soleybirgisdottir/.nuget/packages/",
-      "outputPath": "/Users/soleybirgisdottir/Desktop/TheBookCave/obj/",
-      "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-      ],
-      "configFilePaths": [
-        "/Users/soleybirgisdottir/.nuget/NuGet/NuGet.Config"
->>>>>>> 4141a84f7630d5c1df8f53684ed84a516a1677a0
+        "C:\\Users\\hartmann14\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

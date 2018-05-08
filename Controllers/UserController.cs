@@ -130,8 +130,8 @@ namespace authentication_repo.Controllers
         public static void SeedData(ShippingAddressInputModel newAddres)
         {   
             var user_db = new DataContext();
-            var get_user = _userRepo.GetUsers();
-            get_user.Select(x => x.UserID).FirstOrDefault();
+           // var get_user = _userRepo.GetUsers();
+            //get_user.Select(x => x.UserID).FirstOrDefault();
 
             var shipping_db = new DataContext();
             var shipping = new List<ShippingAddress>
@@ -143,7 +143,7 @@ namespace authentication_repo.Controllers
                     HouseNumber = newAddres.HouseNumber,
                     Country = newAddres.Country,
                     PostalCode = newAddres.PostalCode,
-                    UserID = get_user.UserID
+                   // UserID = get_user.UserID
                 }            
                 
             
@@ -170,7 +170,7 @@ namespace authentication_repo.Controllers
 
         [HttpGet]
         public IActionResult UserAccount()
-        {   var user = _userRepo.GetUser();
+        {   var user = _userRepo.GetUsers();
             return View();
         }
 
