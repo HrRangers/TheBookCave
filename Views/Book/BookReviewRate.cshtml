@@ -1,0 +1,19 @@
+@model TheBookCave.Models.InputModels.BookInputModel
+
+<form asp-action="BookReviewRate" asp-controller="Book" class="form-control" method="POST">
+    <div asp-validation-summary="All">
+    <label asp-for="Review">Write something nice</label>
+    <textarea rows="12" cols="50" class="form-control" asp-for="Review">
+        ...
+    </textarea>   
+    <select asp-for="Rating" class="form-control" asp-for="Rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    <button class="btn btn-primary" asp-action="Index">Cancel</button>
+    <button type="submit" class="btn btn-primary">Add!</button>
+    </div>
+</form>

@@ -4,8 +4,12 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-
+using Microsoft.AspNetCore.Authorization;
+using TheBookCave.Data;
 using TheBookCave.Models;
+using TheBookCave.Models.EntityModels;
+using TheBookCave.Models.ViewModels;
+using TheBookCave.Models.InputModels;
 using TheBookCave.Repositories;
 
 namespace TheBookCave.Controllers
@@ -106,6 +110,47 @@ namespace TheBookCave.Controllers
             return View(bookbyISBN);
 
         }
+        
+        [Authorize]
+        [HttpGet]
+        public IActionResult BookReviewRate()
+        {
+
+            return View();
+        }
+
+        /// Er ekki alveg ad virka, er ad reyna fa input model og svo mixxa tvi inn vid ID i Gagnagrunn
+        [Authorize]
+        [HttpPost] 
+        public IActionResult BookReviewRate(BookInputModel model)
+        {
+            if(ModelState.IsValid)
+            {  
+                 SeedData(model);
+                 return RedirectToAction("Index");
+            }
+
+            return View();
+
+        }
+        public static void SeedData(BookInputModel model)
+        {   
+            var book_db = new DataContext();
+            var book_rated = book_db.Books.Select(x => x.Id).FirstOrDefault();
+            {   
+                new Book()
+                {   
+                  
+                     Rating = model.Rating,
+                     Review = model.Review,
+            
+                };  
+
+            };
+       
+                book_db.SaveChanges();
+        }
+
         public IActionResult NewBooks()
         {
             var newestBooks = _bookRepo.GetNewArrivals();
