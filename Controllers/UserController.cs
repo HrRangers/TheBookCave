@@ -12,6 +12,7 @@ using TheBookCave.Data;
 using authentication_repo.Models.ViewModels;
 using authentication_repo.Models;
 using System.Security.Claims;
+using TheBookCave.Repositories;
 
 namespace authentication_repo.Controllers
 {
@@ -20,11 +21,14 @@ namespace authentication_repo.Controllers
 
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly UserManager<ApplicationUser> _userManager; 
-
+        
+        private UserRepo _userRepo;
+        
         public UserController(SignInManager<ApplicationUser> signInManager, UserManager<ApplicationUser> userManager)
         {
             _signInManager = signInManager;
             _userManager = userManager; 
+            _userRepo = new UserRepo();
         }
         public IActionResult SignUp()
         {
@@ -92,10 +96,10 @@ namespace authentication_repo.Controllers
                     FirstName = model.FirstName,
                     LastName = model.LastName,
                     Email = model.Email
-                }
-                       
-
+        
+                }                  
             };
+
             user_db.AddRange(users);
             user_db.SaveChanges();
 
@@ -104,7 +108,7 @@ namespace authentication_repo.Controllers
         [HttpGet]
         public IActionResult UserRegister()
         {   
-                
+            
             return View();
         }
 
@@ -137,9 +141,10 @@ namespace authentication_repo.Controllers
             shipping_db.AddRange(shipping);
             shipping_db.SaveChanges();
         }
-
+        
+        [HttpGet]
         public IActionResult UserAccount()
-        {
+        {   var user = _userRepo.GetUser();
             return View();
         }
 

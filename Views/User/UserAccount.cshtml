@@ -1,3 +1,17 @@
+@model List<TheBookCave.Models.ViewModels.UserViewModel>
+
 @{
-    ViewData["Title"] = "Login";
+    ViewData["Title"] = "UserHomePage";
+}
+
+@foreach(var user in @Model)
+{ 	
+    <ul>
+        <li>@user.FirstName</li>
+        <li>@user.LastName</li>
+        <li>@user.Country</li>
+        <li>@user.Address</li>
+        <li>@user.City</li>
+    </ul>
+
 }

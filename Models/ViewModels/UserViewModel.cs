@@ -14,6 +14,8 @@ namespace TheBookCave.Models.ViewModels
         public string City { get; set; }
         public long HouseNumber { get; set; }
         public string PostalCode { get; set; }  
+
+        public int ShippingID { get; set; }  
     }
 
 }
