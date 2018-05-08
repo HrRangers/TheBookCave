@@ -13,7 +13,7 @@ namespace TheBookCave.Repositories
             _db = new DataContext();
         }
 
-        public List<UserViewModel> GetUser()
+        public List<UserViewModel> GetUsers()
         {
             var user = (from u in _db.Users
                         join s in _db.ShippingAddress on u.Id equals s.Id
@@ -32,9 +32,13 @@ namespace TheBookCave.Repositories
                             PostalCode = s.PostalCode,
                             ShippingID = s.Id
                         }).ToList();
-            return user;
+                 return user;
 
         }
+
+
+
+        
 
     }
 }

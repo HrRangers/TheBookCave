@@ -8,3 +8,13 @@ C:\Users\hartmann14\Desktop\3ViknaGit\TheBookCave\obj\Debug\netcoreapp2.0\TheBoo
 C:\Users\hartmann14\Desktop\3ViknaGit\TheBookCave\obj\Debug\netcoreapp2.0\TheBookCave.AssemblyInfo.cs
 C:\Users\hartmann14\Desktop\3ViknaGit\TheBookCave\obj\Debug\netcoreapp2.0\TheBookCave.dll
 C:\Users\hartmann14\Desktop\3ViknaGit\TheBookCave\obj\Debug\netcoreapp2.0\TheBookCave.pdb
+C:\Users\Hartiparti\Desktop\Git\TheBookCave\bin\Debug\netcoreapp2.0\TheBookCave.deps.json
+C:\Users\Hartiparti\Desktop\Git\TheBookCave\bin\Debug\netcoreapp2.0\TheBookCave.runtimeconfig.json
+C:\Users\Hartiparti\Desktop\Git\TheBookCave\bin\Debug\netcoreapp2.0\TheBookCave.runtimeconfig.dev.json
+C:\Users\Hartiparti\Desktop\Git\TheBookCave\bin\Debug\netcoreapp2.0\TheBookCave.dll
+C:\Users\Hartiparti\Desktop\Git\TheBookCave\bin\Debug\netcoreapp2.0\TheBookCave.pdb
+C:\Users\Hartiparti\Desktop\Git\TheBookCave\obj\Debug\netcoreapp2.0\TheBookCave.csproj.CoreCompileInputs.cache
+C:\Users\Hartiparti\Desktop\Git\TheBookCave\obj\Debug\netcoreapp2.0\TheBookCave.AssemblyInfoInputs.cache
+C:\Users\Hartiparti\Desktop\Git\TheBookCave\obj\Debug\netcoreapp2.0\TheBookCave.AssemblyInfo.cs
+C:\Users\Hartiparti\Desktop\Git\TheBookCave\obj\Debug\netcoreapp2.0\TheBookCave.dll
+C:\Users\Hartiparti\Desktop\Git\TheBookCave\obj\Debug\netcoreapp2.0\TheBookCave.pdb

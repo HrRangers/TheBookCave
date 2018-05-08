@@ -12,6 +12,8 @@ namespace TheBookCave.Models.EntityModels
         public string FavoriteBook { get; set; }
         public byte[] Image;  
         /// User tharf ad hafa pöntunarnúmer
+        [Key]
+        [ForeignKey("ShippingID")]
         public int ShippingID  { get; set; }
     }
 

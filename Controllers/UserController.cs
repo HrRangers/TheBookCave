@@ -95,7 +95,8 @@ namespace authentication_repo.Controllers
 
                     FirstName = model.FirstName,
                     LastName = model.LastName,
-                    Email = model.Email
+                    Email = model.Email,
+                   
         
                 }                  
             };
@@ -115,16 +116,23 @@ namespace authentication_repo.Controllers
         [HttpPost]
         public IActionResult UserRegister(ShippingAddressInputModel newAddres)
         {   
+
             if(ModelState.IsValid)
             {   
+               
                 SeedData(newAddres);
-                return RedirectToAction("UserAccount");
+   
             }       
             return View();
         }
-
+       
+        [HttpPost]
         public static void SeedData(ShippingAddressInputModel newAddres)
         {   
+            var user_db = new DataContext();
+            var get_user = _userRepo.GetUsers();
+            get_user.Select(x => x.UserID).FirstOrDefault();
+
             var shipping_db = new DataContext();
             var shipping = new List<ShippingAddress>
             {
@@ -134,14 +142,32 @@ namespace authentication_repo.Controllers
                     City = newAddres.City,
                     HouseNumber = newAddres.HouseNumber,
                     Country = newAddres.Country,
-                    PostalCode = newAddres.PostalCode
+                    PostalCode = newAddres.PostalCode,
+                    UserID = get_user.UserID
                 }            
-
+                
+            
             };
             shipping_db.AddRange(shipping);
+            
+         
+
             shipping_db.SaveChanges();
         }
-        
+        [HttpPost]
+   /*     public static void SeedDataUpdateUserID(User user)
+        {   
+            var shipping_db = new DataContext();
+            shipping_db.ShippingAddress.Add(new ShippingAddress{
+                UserID = user.Id
+            });
+               shipping_db.ShippingAddress.Add(new ShippingAddress{
+                UserID = user.Id
+            });
+      
+            shipping_db.SaveChanges();        
+        }*/
+
         [HttpGet]
         public IActionResult UserAccount()
         {   var user = _userRepo.GetUser();
