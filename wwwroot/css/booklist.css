@@ -76,6 +76,10 @@
   font-size: 15px;
   font-weight: bold;
 }
+.card-genre{
+    font-size: 15px;
+    font-weight: bold;
+}
 
 img {
   border: 1.5px solid black;

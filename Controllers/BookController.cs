@@ -167,9 +167,19 @@ namespace TheBookCave.Controllers
         {
             return View("AboutUs");
         }
+
+      [HttpGet]
         public IActionResult ContactUs()
         {
+    
             return View("ContactUs");
+        }
+        
+        [HttpPost]
+        public IActionResult SendInfo()
+        {
+            
+            return RedirectToAction ("Index");
         }
     }
 }
