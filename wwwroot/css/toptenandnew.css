@@ -1,0 +1,18 @@
+h2{
+    font-size:20px;
+}
+div.btn-group a{
+    margin: 10px;
+}
+img{
+    width: 300px;
+    height: 430px;
+    margin-left:35px;
+    margin-right:45px;
+    float: left; 
+}
+.album{
+    width: 1200px;
+    height: 500px;
+    border: black;
+}

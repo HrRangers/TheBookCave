@@ -1,5 +1,5 @@
 ﻿@model List<TheBookCave.Models.ViewModels.BookListViewModel>
-
+<link rel="stylesheet" href="~/css/toptenandnew.css"/>
 @{
     ViewData["Title"] = "Top Ten Books" ;
 }
@@ -16,17 +16,15 @@
         { 		
 			<div class="album py-5 bg-light" align-items-center>
 				<div class="col-sm">
-					<h2 class-"title">@book.Title</h2>
 					<a asp-controller="Book" asp-action="BookDetails" asp-route-isbn="@book.ISBN"><img class="card-img-top" src="@book.Image" alt="Not Found"></a>
-					<p>ISBN: @book.ISBN</p>
-					<p class= "card-text">@book.Description</p>
-					<h5 class="card-author">Author: @book.Author</h5>
+					<h2 class="title">@book.Title</h2>
+                    <h5 class="card-author">Author: @book.Author</h5>
+                    <h5 class="card-genre">Genre: @book.Genre</h5>
 					<h5 class="card-rating">Rating: @book.Rating</h5>
 					<h5 class="card-price">Price: @book.Price</h5>
-					<p>@book.ISBN</p>
 					<div class="btn-group">
 						<a asp-controller="Book" asp-action="BookDetails" asp-route-isbn="@book.ISBN"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
-						<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+						<button type="button" class="btn btn-sm btn-outline-secondary">Add to cart</button>
 					</div>
 				</div>
 			</div>

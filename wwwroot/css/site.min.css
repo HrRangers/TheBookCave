@@ -127,3 +127,7 @@ ul.nav.navbar-nav.navbar-right li a:hover {
     color: black !important;
     background-color: #dddddd;
 }
+.jumbotron{
+    padding: 0px;
+    margin-top: -30px;
+}

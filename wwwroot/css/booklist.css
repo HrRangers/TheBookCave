@@ -3,14 +3,16 @@
   position: fixed;
   border: none;
   width: 200px;
+  bottom: 55px;
+
 }
 
 .genre-nav input {
   border: none;
-  background-color: white;
+  background-color: Transparent;
   color: black;
   display: block;
-  padding: 12px;
+  padding: 10px;
   font-weight: bold;
   text-decoration: none;
 }
@@ -101,7 +103,10 @@ label:hover {
   font-weight: bold;
   text-decoration: none;
 }
-
+.jumbotron{
+    padding: 0px;
+    margin-top: -30px;
+}
 .book-sorter input:hover {
   border: none;
   background-color: none;
@@ -123,6 +128,6 @@ div.col-md-4{
     height:490px;
     word-wrap: break-word;
 }
-p{
-    display: none;
+.isbn{
+    display:none;
 }

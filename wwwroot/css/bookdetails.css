@@ -1,16 +1,19 @@
 .card-img-top{
     float: left;
-    padding: 0px 50px 200px 25px;
+    margin-right: 30px;
 }
 .title{
 padding: 0px,0px, 0px,25px;
 }
 
 
-.card-text{
-    width: 1000px;
+.col-sm{
+    width: 1200px;
+    height: 550px;
     border: none;
     word-wrap: break-word;
+    margin-right : 20px;
+    margin-left : 20px;
 }
 div.btn-group a{
     margin: 10px;
