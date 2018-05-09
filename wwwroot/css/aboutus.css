@@ -1,0 +1,23 @@
+.container {
+    margin: auto;
+    height: 100%;
+    min-height:100vh;
+}
+
+img{
+    margin: 20px;
+    border: 1.5px solid black;
+    border-radius: 8px;
+    width: 20%;
+    height: 20%;
+}
+
+div.pic {
+    text-align: center;
+    margin-top: 20px;
+}
+
+div.about {
+    text-align: center;
+    width: 100%;
+}

@@ -10,13 +10,15 @@
 
 @if (SignInManager.IsSignedIn(User))
 { 
-  <form asp-action="LogOut" asp-controller="User" method="POST">
-  <ul class="nav navbar-nav navbar-right">
-  <li><button type="submit">Log out</button></li>
-  </ul>
-  </form>
-  <ul class="nav navbar-nav navbar-right">
-  <li><a asp-action="UserAccount" asp-controller="User"><button>@claim</button></a>
+    <form asp-action="LogOut" asp-controller="User" method="POST">
+        <ul class="nav navbar-nav navbar-right">
+            <li><button type="submit">Log out</button></li>
+        </ul>
+    </form>
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+            <a class="btn btn-link navbar-btn navbar-link" asp-controller="User" asp-action="MyProfile"><button>@claim</button></a>
+        </li>
   </ul>
   
 }

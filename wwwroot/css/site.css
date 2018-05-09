@@ -28,21 +28,6 @@
         display: none;
     }}
 
-div.pic {
-    text-align: center;
-    margin: 60px;
-}
-img{
-    margin: 20px;
-    border: 1.5px solid black;
-    border-radius: 8px;
-}
-
-div.about {
-    text-align: center;
-    margin-left: 250px;
-    margin-right: 250px;
-}
 
 input[type=text], select, textarea {
     width: 100%;

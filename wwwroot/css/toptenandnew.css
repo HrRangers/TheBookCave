@@ -4,6 +4,27 @@ h2{
 div.btn-group a{
     margin: 10px;
 }
+
+button.btn.btn-sm.btn-outline-secondary {
+    float: left;
+    background-color: black;
+    color: white;
+    border: solid 3px black;
+    border-radius: 10px;
+    margin-right: 10px;
+
+}
+
+button.btn.btn-sm.btn-outline-secondary:hover {
+    color: aqua;
+    border-radius: 10px;
+    border: solid 3px aqua;
+    transition: 0.5s;
+
+}
+
+
+
 img{
     width: 300px;
     height: 430px;

@@ -112,13 +112,7 @@ label:hover {
   background-color: none;
   color: blue;
 }
-div.btn-group a{
-    margin: 10px;
-}
-div.btn-group{
-    position: absolute;
-    bottom: 40px;
-}
+
 p.card-text{
     display:none;
 }
@@ -127,7 +121,38 @@ div.col-md-4{
     width: 200px; 
     height:490px;
     word-wrap: break-word;
+    margin: 10px;
+    border-radius: 10px;
+    padding-top: 3px;
+    border-left: dotted 1px gray;
+    border-right: dotted 1px gray;
 }
 .isbn{
     display:none;
+}
+
+div.btn-group {
+    position: absolute;
+    bottom: 30px;
+
+}
+
+button.btn.btn-sm.btn-outline-secondary {
+    float: left;
+    background-color: black;
+    color: white;
+    border: solid 3px black;
+    border-radius: 10px;
+    margin-right: 10px;
+    height: auto;
+    bottom: 0;
+
+}
+
+button.btn.btn-sm.btn-outline-secondary:hover {
+    color: aqua;
+    border-radius: 10px;
+    border: solid 3px aqua;
+    transition: 0.5s;
+
 }

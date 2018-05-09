@@ -1,11 +1,9 @@
-using Microsoft.AspNetCore.Identity;
-
-namespace authentication_repo.Models
+namespace authentication_repo.Models.ViewModels
 {
-
-    public class ApplicationUser : IdentityUser
+    public class ProfileViewModel
     {
         public string FirstName { get; set; }
+
         public string LastName { get; set; }
         public string FavoriteBook { get; set; }
         public int Age { get; set; }

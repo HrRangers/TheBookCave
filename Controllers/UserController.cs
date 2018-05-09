@@ -211,5 +211,37 @@ namespace authentication_repo.Controllers
         {
             return View("AccessDenied");
         }
+
+        //Úr nyjasta myndbandi
+        [Authorize]
+        public async Task<IActionResult> MyProfile()
+        {
+            //get user data
+            var user = await _userManager.GetUserAsync(User);
+
+            return View(new ProfileViewModel {
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                FavoriteBook = user.FavoriteBook,
+                Age = user.Age
+            });
+        }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> MyProfile(ProfileViewModel model)
+        {
+            var user = await _userManager.GetUserAsync(User);
+
+            //Update properties
+            user.FirstName = model.FirstName;
+            user.LastName = model.LastName;
+            user.Age = model.Age;
+            user.FavoriteBook = model.FavoriteBook;
+
+            await _userManager.UpdateAsync(user);
+
+            return View();
+        }
     }
 }

@@ -1,0 +1,28 @@
+@model authentication_repo.Models.ViewModels.ProfileViewModel
+<link rel="stylesheet" href="~/css/myprofile.css"/>
+
+@{
+    ViewData["Title"] = "MyProfile";
+}
+
+
+<form asp-action="MyProfile" asp-controller="User" class="form-horizontal" method="POST">
+    <div class="form-group">
+        <input type="text" autofocus="autofocus" class="form-control" asp-for="FirstName" placeholder="Enter your first name here.." value="@Model.FirstName" />
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" asp-for="LastName" placeholder="Enter your last name here.." value="@Model.LastName" />
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" asp-for="FavoriteBook" placeholder="Enter your favorite book.." value="@Model.FavoriteBook" />
+    </div>
+    <div class="form-group">
+        <input type="number" class="form-control" asp-for="Age" placeholder="Enter your age here.." value="@Model.Age" />
+    </div>
+    <div class="form-group"> 
+        <input type="submit" class="btn btn-default" value="Update Profile"/>
+    </div>
+
+
+
+</form>
