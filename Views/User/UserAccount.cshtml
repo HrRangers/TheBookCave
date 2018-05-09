@@ -1,0 +1,27 @@
+
+@using Microsoft.AspNetCore.Identity
+@using System.Security.Claims
+@using authentication_repo.Models
+
+@inject SignInManager<ApplicationUser> SignInManager
+
+@if (SignInManager.IsSignedIn(User))
+{ 
+        <h1>hello user</h1>
+        @foreach(var user in @Model)
+        { 	
+            <ul>
+                <li>@user.Email</li>
+                <li>@user.FirstName</li>
+                <li>@user.LastName</li>
+            </ul>
+
+        } 
+}
+else
+{
+    <h1>Sorry boss</h1>
+}
+
+
+

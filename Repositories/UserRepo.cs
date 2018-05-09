@@ -15,7 +15,7 @@ namespace TheBookCave.Repositories
         {
             _db = new DataContext();
         }
-        /* 
+        
         public List<UserViewModel> GetAllUsers()
         {
             var users = (from u in _db.Users

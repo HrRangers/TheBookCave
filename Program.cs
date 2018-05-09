@@ -17,7 +17,7 @@ namespace TheBookCave
         public static void Main(string[] args)
         {
             var host = BuildWebHost(args);
-            SeedData();
+            //SeedData();
             host.Run();
         }
 
@@ -29,20 +29,23 @@ namespace TheBookCave
         // Baett vid koda til ad vinna med Database, til thess ad baeta i grunn.
         public static void SeedData()
         {  
+            // byr til breytuna db sem er new DataContext
             var db = new DataContext();
-            var shipping = new Shipping()
+        
+            // byr til lista af bokum. Gagnagrunnurinn ser um ad bua til ID
+            // ef db er tomur, tha addaru inn i gagnagrunn.
+             if(!db.Users.Any())
             {
-                Address = "Some",      
-                City = "Some",    
-                HouseNumber = 24,  
-                Country = "Some",
-                PostalCode = "201",
-                UserID = "Email"
-
-            };
-            db.AddRange(shipping);
-            db.SaveChanges();               
-               
-        }   
+                var intialUser = new List<User>()
+                {   
+                    new User {
+                        
+                    }                  
+                };
+                
+                db.AddRange(intialUser);       /// Setur initalBooks i db
+                db.SaveChanges();               /// Vista breytingu
+             }  
+        } 
     }   
 }

@@ -54,7 +54,7 @@ namespace authentication_repo.Controllers
                 /// 
                 await _userManager.AddClaimAsync(user, new Claim("Name","Email", $"{model.FirstName} {model.LastName} {model.Email}"));
                 await _signInManager.SignInAsync(user, false);
-               // SeedData(model);
+       
                 return RedirectToAction("RegisterShipping");
 
             }
@@ -88,27 +88,6 @@ namespace authentication_repo.Controllers
             return RedirectToAction("LogIn", "User");
         }   
 
- 
-      /*  public static void SeedData(RegisterViewModel model)
-        {   
-            var user_db = new DataContext();
-            var users = new List<User>()
-            {
-                new User {
-
-                    FirstName = model.FirstName,
-                    LastName = model.LastName,
-                    Email = model.Email,            
-                } 
-                 
-            };
-
-
-            user_db.AddRange(users);
-            user_db.SaveChanges();
-
-        }
-   */
         [Authorize]
         [HttpGet]
         public IActionResult RegisterShipping()
@@ -117,35 +96,38 @@ namespace authentication_repo.Controllers
             return View();
         }
 
+
+
         [Authorize]
-        [HttpPost]
-        public IActionResult RegisterShipping(ShippingInputModel newAddres, ApplicationUser userdetails)
+        [HttpPost]              ///Aetladi ad reyna hengja Shipping ID a User. Nytt migration og tafla var ekki ad virka, tharf ad halda i gomlu.!-- 
+        public IActionResult RegisterShipping(ShippingAddressInputModel newAddres) ///ApplicationUser Email
         {   
 
             if(ModelState.IsValid)
             {   
-                
-                SeedData(newAddres, userdetails);
+                int count = _userRepo.GetAllUsers().Count();
+                SeedData(newAddres);                ///ApplicationUser Email
                 return RedirectToAction("MyProfile");
             }       
             return View("RegisterShipping");
         }
         [Authorize]
         [HttpPost]
-        public static void SeedData(ShippingInputModel newAddres, ApplicationUser userdetails)
+        public static void SeedData(ShippingAddressInputModel newAddres) ///ApplicationUser Email
         {   
-            var user_db = new DataContext();    
+            var user_db = new DataContext();
+            
             var shipping_db = new DataContext();
-            var shipping = new List<Shipping>
+            var shipping = new List<ShippingAddress>
             {
-                new Shipping
+                new ShippingAddress 
                 {
                     Address = newAddres.Address,
                     City = newAddres.City,
                     HouseNumber = newAddres.HouseNumber,
                     Country = newAddres.Country,
                     PostalCode = newAddres.PostalCode,
-                    UserID = userdetails.Email
+                  //  UserID = Email,
                     
                 }
                           

@@ -1,5 +1,5 @@
 namespace TheBookCave.Models.EntityModels
-{
+{      /// Þarf ekki lengur // 
     public class User
     {
     /// User tharf ad hafa ID. Gagnagrunnur gefur Id

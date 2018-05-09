@@ -12,7 +12,7 @@ namespace TheBookCave.Repositories
         {
             _db = new DataContext();
         }
-        /*
+
         List<ShippingViewModel> GetAllShipping()
         {
             var shipping = (from s in _db.ShippingAddress
@@ -30,8 +30,8 @@ namespace TheBookCave.Repositories
                             }).ToList();
             
             return shipping;            
-        }*/
+        }
 
     }
-        
+
 }
