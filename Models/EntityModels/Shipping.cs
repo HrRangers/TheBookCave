@@ -1,7 +1,6 @@
 namespace TheBookCave.Models.EntityModels
 {
-
-    public class ShippingAddress
+     public class Shipping
     {   
         public int Id { get; set; }
         public string Address { get; set; }
@@ -9,7 +8,7 @@ namespace TheBookCave.Models.EntityModels
         public long HouseNumber { get; set; }
         public string Country { get; set; }
         public string PostalCode { get; set; }
-        public int UserID { get; set; }
+        public string UserID { get; set; }
 
     }
 

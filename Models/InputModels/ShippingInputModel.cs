@@ -1,8 +1,8 @@
 using System.ComponentModel.DataAnnotations;
 
 namespace TheBookCave.Models.InputModels
-{    
-    public class ShippingAddressInputModel
+ {   
+    public class ShippingInputModel
     {
         
         [Required]
