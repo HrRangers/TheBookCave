@@ -103,17 +103,17 @@ namespace TheBookCave.Repositories
         }
         public List<BookListViewModel> SortBooksMedium()
         {
-            var sortedMediumBooks = (from sbl in GetAllBooks()
-                                     orderby (sbl.Price == 3000)
-                                     select sbl).ToList();
+            var sortedMediumBooks = (from sbm in GetAllBooks()
+                                     orderby (sbm.Price == 3000)
+                                     select sbm).ToList();
             return sortedMediumBooks;
         }
         public List<BookListViewModel> SortBooksHigest()
         {
-            var sortedHigestBooks = (from sbl in GetAllBooks()
-                                     orderby (sbl.Price)
+            var sortedHigestBooks = (from sbh in GetAllBooks()
+                                     orderby (sbh.Price)
                                      descending
-                                     select sbl).ToList();
+                                     select sbh).ToList();
             return sortedHigestBooks;
         }
     }

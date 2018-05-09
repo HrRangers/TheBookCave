@@ -12,6 +12,7 @@ using TheBookCave.Data;
 using authentication_repo.Models.ViewModels;
 using authentication_repo.Models;
 using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 using TheBookCave.Repositories;
 
 namespace authentication_repo.Controllers
@@ -23,12 +24,14 @@ namespace authentication_repo.Controllers
         private readonly UserManager<ApplicationUser> _userManager; 
         
         private UserRepo _userRepo;
+        private ShippingRepo _shippingRepo;
         
         public UserController(SignInManager<ApplicationUser> signInManager, UserManager<ApplicationUser> userManager)
         {
             _signInManager = signInManager;
             _userManager = userManager; 
             _userRepo = new UserRepo();
+            _shippingRepo = new ShippingRepo();
         }
         public IActionResult SignUp()
         {
@@ -49,7 +52,7 @@ namespace authentication_repo.Controllers
             {
                 /// The User is successfully registered
                 /// 
-                await _userManager.AddClaimAsync(user, new Claim("Name", $"{model.FirstName} {model.LastName}"));
+                await _userManager.AddClaimAsync(user, new Claim("Name","Email", $"{model.FirstName} {model.LastName} {model.Email}"));
                 await _signInManager.SignInAsync(user, false);
                 SeedData(model);
                 return RedirectToAction("UserRegister");
@@ -85,7 +88,7 @@ namespace authentication_repo.Controllers
             return RedirectToAction("LogIn", "User");
         }   
 
-        
+  
         public static void SeedData(RegisterViewModel model)
         {   
             var user_db = new DataContext();
@@ -95,17 +98,18 @@ namespace authentication_repo.Controllers
 
                     FirstName = model.FirstName,
                     LastName = model.LastName,
-                    Email = model.Email,
-                   
-        
-                }                  
+                    Email = model.Email,            
+                } 
+                 
             };
+
 
             user_db.AddRange(users);
             user_db.SaveChanges();
 
         }
         
+        [Authorize]
         [HttpGet]
         public IActionResult UserRegister()
         {   
@@ -113,26 +117,25 @@ namespace authentication_repo.Controllers
             return View();
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult UserRegister(ShippingAddressInputModel newAddres)
         {   
 
             if(ModelState.IsValid)
             {   
-               
-                SeedData(newAddres);
-   
+                int count = _userRepo.GetAllUsers().Count();
+                SeedData(newAddres, count);
+                return RedirectToAction("UserAccount");
             }       
-            return View();
+            return View("UserRegister");
         }
-       
+        [Authorize]
         [HttpPost]
-        public static void SeedData(ShippingAddressInputModel newAddres)
+        public static void SeedData(ShippingAddressInputModel newAddres, int count)
         {   
             var user_db = new DataContext();
-           // var get_user = _userRepo.GetUsers();
-            //get_user.Select(x => x.UserID).FirstOrDefault();
-
+            
             var shipping_db = new DataContext();
             var shipping = new List<ShippingAddress>
             {
@@ -143,40 +146,70 @@ namespace authentication_repo.Controllers
                     HouseNumber = newAddres.HouseNumber,
                     Country = newAddres.Country,
                     PostalCode = newAddres.PostalCode,
-                   // UserID = get_user.UserID
-                }            
-                
-            
+                    UserID = count
+                    
+                }
+                          
             };
             shipping_db.AddRange(shipping);
-            
-         
-
+        
             shipping_db.SaveChanges();
         }
+        
+        [Authorize]
         [HttpPost]
-   /*     public static void SeedDataUpdateUserID(User user)
+        public IActionResult UpdateUserProfile(UserInputModel userUpdate)
         {   
-            var shipping_db = new DataContext();
-            shipping_db.ShippingAddress.Add(new ShippingAddress{
-                UserID = user.Id
-            });
-               shipping_db.ShippingAddress.Add(new ShippingAddress{
-                UserID = user.Id
-            });
-      
-            shipping_db.SaveChanges();        
-        }*/
-
-        [HttpGet]
-        public IActionResult UserAccount()
-        {   var user = _userRepo.GetUsers();
-            return View();
+                
+                if(ModelState.IsValid )
+                {
+                    SeedDataUpdateUserProfile(userUpdate);
+                    return RedirectToAction("UserAccount");    
+                }                             
+            return View("UpdateUserProfile");          
         }
 
+        [HttpPost]
+        public async Task<IActionResult> UpdateUserProfile(ApplicationUser userdetails)
+        {
+            IdentityResult wait = await _userManager.UpdateAsync(userdetails);
+            if(wait.Succeeded)
+            {
+                return RedirectToAction("User", "UserAccount");
+            }
+            return View(userdetails);
+        }
+
+
+        [Authorize]
+        [HttpPost]
+        public static void SeedDataUpdateUserProfile(UserInputModel user)
+        {   
+            var user_db = new DataContext();
+            
+            var user_updated = user_db.Users.Select(x => x.Email);
+            {   
+                new User()
+                {   
+                  
+                    FavoriteBook = user.FavoriteBook
+            
+                };  
+            }   
+        }
+
+        [Authorize]
+        [HttpGet]
+        public IActionResult UserAccount(LoginViewModel model)
+        {   
+            //var user = _userRepo.GetUserByEmail(model.Email);
+            return View();
+        } 
+
+        [HttpGet]
         public IActionResult AccessDenied()
         {
-            return RedirectToAction("LogIn", "User");
+            return View("AccessDenied");
         }
     }
 }

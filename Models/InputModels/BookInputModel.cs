@@ -7,8 +7,7 @@ namespace TheBookCave.Models.InputModels
         
         [Required]
         public int Rating { get; set; }
-
-
+        
         [Required]
          public string Review { get; set; }
     

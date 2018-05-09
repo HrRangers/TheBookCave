@@ -20,7 +20,7 @@ namespace TheBookCave.Controllers
 
         public IActionResult AccessDenied()
         {
-            return RedirectToAction("LogIn", "User");
+            return RedirectToAction("LogIn", "User", new { area = "" });
         }
 
     }

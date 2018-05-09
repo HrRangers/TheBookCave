@@ -4,6 +4,8 @@
     ViewData["Title"] = "Register";
 }
 
+<h1>Just the final step! For us to send you your books!</h1>
+
 <form asp-action="UserRegister" asp-controller="User" class="form-horizontal" method="POST">
     <div asp-validation-summary="All">
         <label asp-for="Address">Address</label>
@@ -266,12 +268,11 @@
     <label asp-for="PostalCode">PostalCode</label>
     <input type="number" class="form-control" asp-for="PostalCode">
     <button type="submit" class="btn btn-primary" asp-action= "Index">Cancel</button>
-    <button type="submit" class="btn btn-primary">Sign Up!</button>
-    </div>
+    <button type="submit" class="btn btn-primary" >Sign Up</button>
+</div>
 </form>
 
 
 
 
     
-        

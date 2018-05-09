@@ -1,20 +1,27 @@
-@model List<TheBookCave.Models.ViewModels.UserViewModel>
 
-@{
-    ViewData["Title"] = "UserHomePage";
+@using Microsoft.AspNetCore.Identity
+@using System.Security.Claims
+@using authentication_repo.Models
+
+@inject SignInManager<ApplicationUser> SignInManager
+
+@if (SignInManager.IsSignedIn(User))
+{ 
+        <h1>hello user</h1>
+        @foreach(var user in @Model)
+        { 	
+            <ul>
+                <li>@user.Email</li>
+                <li>@user.FirstName</li>
+                <li>@user.LastName</li>
+            </ul>
+
+        } 
+}
+else
+{
+    <h1>Sorry boss</h1>
 }
 
-@foreach(var user in @Model)
 
-<h1>hello user</h1>
 
-{ 	
-    <ul>
-        <li>@user.FirstName</li>
-        <li>@user.LastName</li>
-        <li>@user.Country</li>
-        <li>@user.Address</li>
-        <li>@user.City</li>
-    </ul>
-
-}

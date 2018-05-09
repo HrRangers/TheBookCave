@@ -73,7 +73,10 @@ namespace TheBookCave
                     template: "{controller=Book}/{action=Index}/{id?}");
                 routes.MapRoute(
                     name: "User",
-                    template: "{controller=User}/{action=UserLogin}/{id?}");
+                    template: "{controller=User}/{action=Login}/{id?}");
+                routes.MapRoute(
+                    name: "Cart",
+                    template: "{controller=Cart}/{action=ShoppingCart}/{id?}");
             });
         }
     }

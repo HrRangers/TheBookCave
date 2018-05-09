@@ -119,21 +119,20 @@ namespace TheBookCave.Controllers
             return View();
         }
 
-        /// Er ekki alveg ad virka, er ad reyna fa input model og svo mixxa tvi inn vid ID i Gagnagrunn
         [Authorize]
         [HttpPost] 
-        public IActionResult BookReviewRate(BookInputModel model)
-        {
+        public IActionResult BookReviewRate(BookInputModel book)
+        {   
             if(ModelState.IsValid)
             {  
-                 SeedData(model);
+                 SeedData(book);
                  return RedirectToAction("Index");
             }
 
             return View();
 
         }
-        public static void SeedData(BookInputModel model)
+        public static void SeedData(BookInputModel book)
         {   
             var book_db = new DataContext();
             var book_rated = book_db.Books.Select(x => x.Id).FirstOrDefault();
@@ -141,14 +140,15 @@ namespace TheBookCave.Controllers
                 new Book()
                 {   
                   
-                     Rating = model.Rating,
-                     Review = model.Review,
+                     Rating = book.Rating,
+                     Review = book.Review,
             
                 };  
 
             };
        
                 book_db.SaveChanges();
+                
         }
 
         public IActionResult NewBooks()
