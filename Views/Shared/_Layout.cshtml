@@ -6,7 +6,7 @@
         <title>@ViewData["Title"]</title>
         <environment include="Development">
             <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-            <link rel="stylesheet" href="~/css/site.css" />
+            <link rel="stylesheet" href="~/css/site.min.css" />
         </environment>
         <environment exclude="Development">
             <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -42,10 +42,10 @@
             </div>
             <nav class="navbar navbar-inverse bottom">
                 <ul class="nav navbar-nav links">
-                    <li><a id="list" class="navbuttons" asp-area="" asp-controller="Book" asp-action="ListOfBooks">Book Catalogue</a></li>
-                    <li><a class="navbuttons" asp-area="" asp-controller="Book" asp-action="TopTenBooks">Top Ten Books</a></li>
-                    <li><a class="navbuttons" asp-area="" asp-controller="Book" asp-action="NewBooks">New Arrivals</a></li>
-                    <li><a id="about" class="navbuttons" asp-area="" asp-controller="Book" asp-action="AboutUs">About us</a></li>
+                    <li><a id="list" asp-area="" asp-controller="Book" asp-action="ListOfBooks">Book Catalogue</a></li>
+                    <li><a id="top" asp-area="" asp-controller="Book" asp-action="TopTenBooks">Top Ten Books</a></li>
+                    <li><a id="new" asp-area="" asp-controller="Book" asp-action="NewBooks">New Arrivals</a></li>
+                    <li><a id="about" asp-area="" asp-controller="Book" asp-action="AboutUs">About us</a></li>
                 </ul>
             </nav>
         </nav>

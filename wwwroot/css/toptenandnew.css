@@ -23,8 +23,6 @@ button.btn.btn-sm.btn-outline-secondary:hover {
 
 }
 
-
-
 img{
     width: 300px;
     height: 430px;
@@ -33,7 +31,7 @@ img{
     float: left; 
 }
 .album{
-    width: 1200px;
-    height: 500px;
+    width: 1000px;
+    height: 300px;
     border: black;
 }

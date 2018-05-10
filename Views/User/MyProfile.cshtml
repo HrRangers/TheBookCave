@@ -20,9 +20,11 @@
         <input type="number" class="form-control" asp-for="Age" placeholder="Enter your age here.." value="@Model.Age" />
     </div>
     <div class="form-group"> 
-        <input type="submit" class="btn btn-default" value="Update Profile"/>
+        <input onclick="myFunction()" type="submit" class="btn btn-default" value="Update Profile"/>
     </div>
-
+<script>function myFunction() {
+    alert("You have succesfully updated your profile.");
+}</script>
 
 
 </form>

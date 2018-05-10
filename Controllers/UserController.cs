@@ -226,6 +226,7 @@ namespace authentication_repo.Controllers
                 Age = user.Age
             });
         }
+        
 
         [Authorize]
         [HttpPost]
@@ -241,7 +242,8 @@ namespace authentication_repo.Controllers
 
             await _userManager.UpdateAsync(user);
 
-            return View();
+            return View(model);
         }
+
     }
 }

@@ -114,10 +114,7 @@ label:hover {
   font-weight: bold;
   text-decoration: none;
 }
-.jumbotron{
-    padding: 0px;
-    margin-top: -30px;
-}
+
 .book-sorter input:hover {
   border: none;
   background-color: none;
