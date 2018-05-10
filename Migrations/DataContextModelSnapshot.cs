@@ -66,18 +66,30 @@ namespace TheBookCave.Migrations
 
             modelBuilder.Entity("TheBookCave.Models.EntityModels.Order", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("OrderId")
                         .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Address");
 
                     b.Property<int>("BookId");
 
-                    b.Property<long>("OrderPrice");
+                    b.Property<string>("City");
+
+                    b.Property<string>("Country");
+
+                    b.Property<string>("Email");
+
+                    b.Property<long>("HouseNumber");
+
+                    b.Property<int>("OrderPrice");
+
+                    b.Property<string>("PostalCode");
 
                     b.Property<int>("ShippingID");
 
                     b.Property<int>("UserID");
 
-                    b.HasKey("Id");
+                    b.HasKey("OrderId");
 
                     b.ToTable("Orders");
                 });
