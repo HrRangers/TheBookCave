@@ -27,8 +27,13 @@
     <label for="subject">Subject *</label>
     <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
 
-    <input type="submit" value="Send">
+    <input onclick="myFunction()" asp-controller="Book" asp-action="Index" type="submit" value="Send">
   </form>
   <br>
   <p>Don't want to use our form? That's alright! You can email us <a href="contactus@thebookcave.com">here</a></p>
+
+  <script>function myFunction() {
+    alert("Thank you for contacting us, we will reply as soon as possible. Have a nice day :)");
+}</script>
+
 </div>

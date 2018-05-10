@@ -101,13 +101,6 @@ namespace TheBookCave.Repositories
             return sortedLowestBooks;
 
         }
-        public List<BookListViewModel> SortBooksMedium()
-        {
-            var sortedMediumBooks = (from sbm in GetAllBooks()
-                                     orderby (sbm.Price == 3000)
-                                     select sbm).ToList();
-            return sortedMediumBooks;
-        }
         public List<BookListViewModel> SortBooksHigest()
         {
             var sortedHigestBooks = (from sbh in GetAllBooks()

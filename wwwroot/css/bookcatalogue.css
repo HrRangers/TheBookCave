@@ -1,9 +1,9 @@
 .genre-nav {
   margin-left: 30px;
-  position: fixed;
   border: none;
   width: 200px;
   bottom: 55px;
+  float: left;
 
 }
 
@@ -15,18 +15,6 @@
   padding: 10px;
   font-weight: bold;
   text-decoration: none;
-}
-
-.genre-nav input:hover {
-  border: none;
-  background-color: none;
-  color: blue;
-}
-
-.genre-nav input:active {
-  border: none;
-  background-color: none;
-  color: blue;
 }
 
 .album {
@@ -83,12 +71,6 @@ label {
   margin-left: 5px;
 }
 
-label:hover {
-  border: none;
-  background-color: none;
-  color: blue;
-}
-
 .book-sorter {
   color: blue;
 }
@@ -104,17 +86,13 @@ label:hover {
   text-decoration: none;
 }
 
-.book-sorter input:hover {
-  border: none;
-  background-color: none;
-  color: blue;
-}
 
 p.card-text{
     display:none;
 }
 
 div.col-md-4{
+    float: left;
     width: 200px; 
     height:490px;
     word-wrap: break-word;
@@ -139,7 +117,7 @@ button.btn.btn-sm.btn-outline-secondary {
     background-color: black;
     color: white;
     border: solid 3px black;
-    border-radius: 10px;
+    border-radius: 10px !important;
     margin-right: 10px;
     height: auto;
     bottom: 0;
@@ -152,4 +130,34 @@ button.btn.btn-sm.btn-outline-secondary:hover {
     border: solid 3px aqua;
     transition: 0.5s;
 
+}
+
+input.btn-default:hover {
+    color: aqua;
+    background: black;
+    border-radius: 10px;
+}
+
+input.btn-default:hover {
+    color: aqua;
+    background-color: black;
+    transition: 0.5s;
+}
+
+div.book-sorter {
+    margin-bottom: 20px;
+}
+
+input.genre:hover {
+    color: aqua;
+    background: black;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+label:hover {
+    color: aqua;
+    background: black;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
 }

@@ -1,5 +1,11 @@
 @model TheBookCave.Models.InputModels.BookInputModel
 
+@{
+    ViewData["Title"] = "Book Review";
+}
+<link rel="stylesheet" href="~/css/site.css" />
+
+
 <form asp-action="BookReviewRate" asp-controller="Book" class="form-control" method="POST">
     <div asp-validation-summary="All">
     <label asp-for="Review">Write something nice</label>

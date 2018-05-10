@@ -1,5 +1,5 @@
 @model List<TheBookCave.Models.ViewModels.BookListViewModel>
-<link rel="stylesheet" href="~/css/booklist.css"/>
+<link rel="stylesheet" href="~/css/bookcatalogue.css"/>
 @{
     ViewData["Title"] = "Book Catalogue";
 }
@@ -13,11 +13,10 @@
 <div class="container-fluid">
     <div class="book-sorter">
         <form asp-controller="Book" asp-action="SortBooks" method="POST">
-            <input type="submit"  name="sort" value="A to Z"/>
-            <input type="submit"  name="sort" value="Z to A"/>
-            <input type="submit"  name="sort" value="Lower prices"/>
-            <input type="submit"  name="sort" value="Medium prices"/>
-            <input type="submit"  name="sort" value="Higher prices"/>
+            <input class="btn-default" type="submit"  name="sort" value="A to Z"/>
+            <input class="btn-default"type="submit"  name="sort" value="Z to A"/>
+            <input class="btn-default" type="submit"  name="sort" value="Lowest to highest price"/>
+            <input class="btn-default" type="submit"  name="sort" value="Highest to lowest price"/>
         </form>
     </div>
     <div class="genre-nav">

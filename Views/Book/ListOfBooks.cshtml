@@ -1,5 +1,5 @@
 @model List<TheBookCave.Models.ViewModels.BookListViewModel>
-<link rel="stylesheet" href="~/css/booklist.css"/>
+<link rel="stylesheet" href="~/css/bookcatalogue.css"/>
 @{
     ViewData["Title"] = "Book Catalogue";
 }
@@ -13,24 +13,23 @@
 <div class="container-fluid">
     <div class="book-sorter">
         <form asp-controller="Book" asp-action="SortBooks" method="POST">
-            <input type="submit"  name="sort" value="A to Z"/>
-            <input type="submit"  name="sort" value="Z to A"/>
-            <input type="submit"  name="sort" value="Lower prices"/>
-            <input type="submit"  name="sort" value="Medium prices"/>
-            <input type="submit"  name="sort" value="Higher prices"/>
+            <input class="btn-default" type="submit"  name="sort" value="A to Z"/>
+            <input class="btn-default" type="submit"  name="sort" value="Z to A"/>
+            <input class="btn-default" type="submit"  name="sort" value="Lowest to highest price"/>
+            <input class="btn-default" type="submit"  name="sort" value="Highest to lowest price"/>
         </form>
     </div>
     <div class="genre-nav">
         <form asp-controller="Book" asp-action="ListOfBooks" method="POST">
-            <a asp-controller="Book" asp-action="ListOfBooks"><label for "submit">All Books</label></a>
-            <input type="submit"  name="genre" value="Fantasy"/>
-            <input type="submit"  name="genre" value="Food & Fun"/>
-            <input type="submit"  name="genre" value="Crime"/>
-            <input type="submit"  name="genre" value="Health"/>
-            <input type="submit"  name="genre" value="Personal development"/>
-            <input type="submit"  name="genre" value="Children"/>
-            <input type="submit"  name="genre" value="Star Wars"/>
-            <input type="submit"  name="genre" value="Science & Geography"/>	
+            <a class="genre" asp-controller="Book" asp-action="ListOfBooks"><label for "submit">All Books</label></a>
+            <input class="genre" type="submit"  name="genre" value="Fantasy"/>
+            <input class="genre" type="submit"  name="genre" value="Food & Fun"/>
+            <input class="genre" type="submit"  name="genre" value="Crime"/>
+            <input class="genre" type="submit"  name="genre" value="Health"/>
+            <input class="genre" type="submit"  name="genre" value="Personal development"/>
+            <input class="genre" type="submit"  name="genre" value="Children"/>
+            <input class="genre" type="submit"  name="genre" value="Star Wars"/>
+            <input class="genre" type="submit"  name="genre" value="Science & Geography"/>	
         </form>
     </div>
     <div class="row">
