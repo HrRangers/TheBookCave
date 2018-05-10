@@ -35,13 +35,6 @@
   padding-bottom: inherit;
   background-color: none;
 }
-.album2{
-    margin-left: 60px;
-    padding-top: inherit;
-    padding-bottom: inherit;
-    background-color: none;
-
-}
 
 .card {
   float: left;
@@ -75,10 +68,6 @@
 .card-price {
   font-size: 15px;
   font-weight: bold;
-}
-.card-genre{
-    font-size: 15px;
-    font-weight: bold;
 }
 
 img {

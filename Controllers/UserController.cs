@@ -54,8 +54,8 @@ namespace authentication_repo.Controllers
                 /// 
                 await _userManager.AddClaimAsync(user, new Claim("Name","Email", $"{model.FirstName} {model.LastName} {model.Email}"));
                 await _signInManager.SignInAsync(user, false);
-                SeedData(model);
-                return RedirectToAction("UserRegister");
+       
+                return RedirectToAction("RegisterShipping");
 
             }
             return View();
@@ -88,51 +88,32 @@ namespace authentication_repo.Controllers
             return RedirectToAction("LogIn", "User");
         }   
 
-  
-        public static void SeedData(RegisterViewModel model)
-        {   
-            var user_db = new DataContext();
-            var users = new List<User>()
-            {
-                new User {
-
-                    FirstName = model.FirstName,
-                    LastName = model.LastName,
-                    Email = model.Email,            
-                } 
-                 
-            };
-
-
-            user_db.AddRange(users);
-            user_db.SaveChanges();
-
-        }
-        
         [Authorize]
         [HttpGet]
-        public IActionResult UserRegister()
+        public IActionResult RegisterShipping()
         {   
             
             return View();
         }
 
+
+
         [Authorize]
-        [HttpPost]
-        public IActionResult UserRegister(ShippingAddressInputModel newAddres)
+        [HttpPost]              ///Aetladi ad reyna hengja Shipping ID a User. Nytt migration og tafla var ekki ad virka, tharf ad halda i gomlu.!-- 
+        public IActionResult RegisterShipping(ShippingAddressInputModel newAddres) ///ApplicationUser Email
         {   
 
             if(ModelState.IsValid)
             {   
                 int count = _userRepo.GetAllUsers().Count();
-                SeedData(newAddres, count);
-                return RedirectToAction("UserAccount");
+                SeedData(newAddres);                ///ApplicationUser Email
+                return RedirectToAction("MyProfile");
             }       
-            return View("UserRegister");
+            return View("RegisterShipping");
         }
         [Authorize]
         [HttpPost]
-        public static void SeedData(ShippingAddressInputModel newAddres, int count)
+        public static void SeedData(ShippingAddressInputModel newAddres) ///ApplicationUser Email
         {   
             var user_db = new DataContext();
             
@@ -146,7 +127,7 @@ namespace authentication_repo.Controllers
                     HouseNumber = newAddres.HouseNumber,
                     Country = newAddres.Country,
                     PostalCode = newAddres.PostalCode,
-                    UserID = count
+                  //  UserID = Email,
                     
                 }
                           
@@ -156,56 +137,6 @@ namespace authentication_repo.Controllers
             shipping_db.SaveChanges();
         }
         
-        [Authorize]
-        [HttpPost]
-        public IActionResult UpdateUserProfile(UserInputModel userUpdate)
-        {   
-                
-                if(ModelState.IsValid )
-                {
-                    SeedDataUpdateUserProfile(userUpdate);
-                    return RedirectToAction("UserAccount");    
-                }                             
-            return View("UpdateUserProfile");          
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> UpdateUserProfile(ApplicationUser userdetails)
-        {
-            IdentityResult wait = await _userManager.UpdateAsync(userdetails);
-            if(wait.Succeeded)
-            {
-                return RedirectToAction("User", "UserAccount");
-            }
-            return View(userdetails);
-        }
-
-
-        [Authorize]
-        [HttpPost]
-        public static void SeedDataUpdateUserProfile(UserInputModel user)
-        {   
-            var user_db = new DataContext();
-            
-            var user_updated = user_db.Users.Select(x => x.Email);
-            {   
-                new User()
-                {   
-                  
-                    FavoriteBook = user.FavoriteBook
-            
-                };  
-            }   
-        }
-
-        [Authorize]
-        [HttpGet]
-        public IActionResult UserAccount(LoginViewModel model)
-        {   
-            //var user = _userRepo.GetUserByEmail(model.Email);
-            return View();
-        } 
-
         [HttpGet]
         public IActionResult AccessDenied()
         {
