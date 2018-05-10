@@ -86,10 +86,6 @@ namespace TheBookCave.Controllers
             {
                 sortedBooks = _bookRepo.SortBooksLowest();
             }
-            else if (sort == "Medium prices")
-            {
-                sortedBooks = _bookRepo.SortBooksMedium();
-            }
             else if (sort == "Higher prices")
             {
                 sortedBooks = _bookRepo.SortBooksHigest();

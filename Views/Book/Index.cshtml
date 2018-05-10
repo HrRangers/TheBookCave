@@ -1,5 +1,5 @@
 ﻿@model List<TheBookCave.Models.ViewModels.BookListViewModel>
-<link rel="stylesheet" href="~/css/booklist.css"/>
+<link rel="stylesheet" href="~/css/bookcatalogue.css"/>
 @{
     ViewData["Title"] = "The Book Cave";
 }
@@ -21,8 +21,9 @@
               <h5 class="card-rating">Rating: @book.Rating</h5>
               <h5 class="card-price">Price: @book.Price ISK</h5>
               <div class="btn-group">
+                  <input type="number" id="quantity" placeholder="How many books?"/>
                   <a asp-controller="Book" asp-action="BookDetails" asp-route-isbn="@book.ISBN"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
-                  <a asp-controller="Book" asp-action="BookDetails" asp-route-isbn="@book.ISBN"><button type="button" class="btn btn-sm btn-outline-secondary">Add to cart</button></a>
+                  <a asp-controller="Cart" asp-action="AddToCart"><input type="submit" class="btn btn-sm btn-outline-secondary" value="@book.Id" name="Add to Cart"></a>
               </div>
           </div>
       </div>
