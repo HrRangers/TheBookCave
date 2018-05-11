@@ -1,0 +1,32 @@
+img.step{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+button {
+    float: left;
+    background-color: black;
+    color: white;
+    border: solid 3px black;
+    border-radius: 10px;
+    margin-left: 10px;
+
+}
+
+button:hover {
+    color: aqua;
+    border-radius: 10px;
+    border: solid 3px aqua;
+    transition: 0.5s;
+
+}
+.box{
+    margin-right: 20px;
+
+}
+li{
+    list-style-type:none ;
+}
+.payment{
+    height: 300px;
+}

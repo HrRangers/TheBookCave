@@ -1,0 +1,16 @@
+@{
+    ViewData["Title"] = "ShoppingCart";
+}    
+<link rel="stylesheet" href="~/css/step1.css" />
+<img class="step"src="~/images/step3.jpg" alt="Step3" width="1200" height="150">
+<form class="payment">
+    <fieldset class="center">
+        <legend>Confirmation</legend>
+        
+                <h1>Hey there! Your order is now confirmed.</h1>
+                <p >Hope you enjoy your new books</p>
+       
+    </fieldset>
+    </form>
+    <a asp-controller="cart" asp-action="Step2"><button type=submit>Back</button></a>
+    <a asp-controller="book" asp-action="Index"><button type=submit>Home</button></a>

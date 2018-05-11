@@ -65,5 +65,20 @@ namespace TheBookCave.Controllers
              
             
         }
+        [HttpGet]
+          public IActionResult Step1()
+        {
+            return View();
+        }
+           public IActionResult Step2()
+        {
+            return View();
+        }
+            public IActionResult Step3()
+        {
+            return View();
+        }
+
+
     }
 }
