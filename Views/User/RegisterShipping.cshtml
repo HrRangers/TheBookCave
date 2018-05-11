@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Register";
 }
+<link rel="stylesheet" href="~/css/registershipping.css"/>
 
 <h1>Just the final step! For us to send you your books!</h1>
 
@@ -14,6 +15,7 @@
         <input type="text" class="form-control" asp-for="City">
         <label asp-for="HouseNumber">House number</label>
         <input type="number" class="form-control" asp-for="HouseNumber">
+        <p><b>Choose your country</b></p>
         <select asp-for="Country" class="form-control" asp-for="Country">
         <option value="AF">Afghanistan</option>
         <option value="AX">Åland Islands</option>
@@ -264,11 +266,11 @@
         <option value="YE">Yemen</option>
         <option value="ZM">Zambia</option>
         <option value="ZW">Zimbabwe</option>
-    </select>
+        </select>
     <label asp-for="PostalCode">PostalCode</label>
     <input type="number" class="form-control" asp-for="PostalCode">
     <button type="submit" class="btn btn-primary" asp-action= "Index">Cancel</button>
-    <button type="submit" class="btn btn-primary" >Sign Up</button>
+    <button type="submit" class="btn btn-primary" >Continue</button>
 </div>
 </form>
 

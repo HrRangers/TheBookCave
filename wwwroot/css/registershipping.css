@@ -1,0 +1,24 @@
+h1{
+    text-align: center;
+}
+.form-horizontal{
+    margin: 50px;
+    padding: 10px;
+}
+
+button.btn.btn-primary:hover {
+    color: aqua;
+    border-radius: 10px;
+    border: solid 3px aqua;
+    transition: 0.5s;
+    cursor: pointer;
+}
+button.btn.btn-primary{
+    float: left;
+    background-color: black;
+    color: white;
+    border: solid 3px black;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}

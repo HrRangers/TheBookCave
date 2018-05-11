@@ -1,11 +1,10 @@
 
 @model authentication_repo.Models.ViewModels.LoginViewModel
 
-<link rel="stylesheet" href="~/css/userslogin.css"/>
-
 @{
     ViewData["Title"] = "Login";
 }
+<link rel="stylesheet" href="~/css/userlogin.css"/>
 
 
 <blockquote class="blockquote text-center">
@@ -34,7 +33,7 @@
         <input type="checkbox" class="form-check-input"  asp-for="RememberMe" id="input-remember">
         <label class="form-check-label" for="input-remember">Remember me</label>
     </div>
-    <button type="submit" class="btn btn-primary" asp-controller="Book" class="cancel" asp-action= "Index" value="Cancel">Cancel</button>
+    <button type="submit" class="btn btn-primary" asp-controller="Book" asp-action= "Index" value="Cancel">Cancel</button>
     <button type="submit" class="btn btn-primary" value="LogIn">Log in</button>
     </form>
     </fieldset>
