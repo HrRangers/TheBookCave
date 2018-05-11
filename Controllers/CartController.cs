@@ -9,6 +9,7 @@ using TheBookCave.Repositories;
 using TheBookCave.Models.EntityModels;
 using TheBookCave.Data;
 using TheBookCave.Models.ViewModels;
+using TheBookCave.ViewModels;
 
 namespace TheBookCave.Controllers
 {
@@ -37,33 +38,5 @@ namespace TheBookCave.Controllers
             return RedirectToAction("LogIn", "User", new { area = "" });
         }
 
-        
-        [HttpPost]
-        public IActionResult AddToCart(int id)
-        {   
-            //var cartItem = _cartRepo.GetCart().SingleOrDefault();
-            //var cartItem = _db.Cart;
-             var cartdb = new DataContext();
-             var cartItem = new List<Cart>
-             {
-                new Cart()
-                {
-                    BookId = id,
-                }
-
-
-             };
-            var selectedBook = (from b in _bookRepo.GetAllBooks()
-                                orderby b.Id
-                                select b).ToList(); 
-       
-               
-               cartdb.AddRange(cartItem);
-               cartdb.SaveChanges();
-                return View(selectedBook);            
-            
-             
-            
-        }
     }
 }

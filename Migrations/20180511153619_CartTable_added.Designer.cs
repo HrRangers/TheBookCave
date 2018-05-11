@@ -11,7 +11,7 @@ using TheBookCave.Data;
 namespace TheBookCave.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20180510215100_CartTable_added")]
+    [Migration("20180511153619_CartTable_added")]
     partial class CartTable_added
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -56,6 +56,8 @@ namespace TheBookCave.Migrations
 
                     b.Property<int>("BookId");
 
+                    b.Property<DateTime>("Date");
+
                     b.Property<string>("Email");
 
                     b.Property<int>("Quantity");
@@ -63,6 +65,36 @@ namespace TheBookCave.Migrations
                     b.HasKey("CartId");
 
                     b.ToTable("Cart");
+                });
+
+            modelBuilder.Entity("TheBookCave.Models.EntityModels.Order", b =>
+                {
+                    b.Property<int>("OrderId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Address");
+
+                    b.Property<int>("BookId");
+
+                    b.Property<string>("City");
+
+                    b.Property<string>("Country");
+
+                    b.Property<string>("Email");
+
+                    b.Property<long>("HouseNumber");
+
+                    b.Property<int>("OrderPrice");
+
+                    b.Property<string>("PostalCode");
+
+                    b.Property<int>("ShippingID");
+
+                    b.Property<int>("UserID");
+
+                    b.HasKey("OrderId");
+
+                    b.ToTable("Orders");
                 });
 
             modelBuilder.Entity("TheBookCave.Models.EntityModels.ShippingAddress", b =>
