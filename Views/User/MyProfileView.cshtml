@@ -1,0 +1,19 @@
+@model authentication_repo.Models.ViewModels.ProfileViewModel
+<link rel="stylesheet" href="~/css/myprofileview.css"/>
+
+@{
+    ViewData["Title"] = "MyProfile";
+}
+<h1>My Profile</h1>
+
+<div class="header_1">
+<img src="~/images/user.png" width="350" height="350" alt="Your image" />
+</div>
+
+<div class="col-sm">
+    <h2 class="name">Name:</h2>
+    <h2 class="Email">Email:</h2>
+    <div class="btn-group">
+        <a asp-controller="user" asp-action="Myprofile"><button type="button" class="btn btn-sm btn-outline-secondary">Edit Profile</button></a>
+        </div>
+        </div>

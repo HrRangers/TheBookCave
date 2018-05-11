@@ -6,9 +6,6 @@
     min-height:100vh;
 }
 
-input.btn.btn-default {
-
-}
 
 input.btn.btn-default {
     float: left;
@@ -23,6 +20,25 @@ input.btn.btn-default {
 }
 
 input.btn.btn-default:hover {
+    color: aqua;
+    border-radius: 10px;
+    border: solid 3px aqua;
+    transition: 0.5s;
+
+}
+
+a button.btn.btn-default {
+    float: left;
+    background-color: black;
+    color: white;
+    border: solid 3px black;
+    border-radius: 10px;
+    margin-right: 10px;
+    height: auto;
+    bottom: 0;
+
+}
+a button .btn.btn-default:hover {
     color: aqua;
     border-radius: 10px;
     border: solid 3px aqua;

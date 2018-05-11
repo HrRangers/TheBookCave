@@ -107,7 +107,7 @@ namespace authentication_repo.Controllers
             {   
                 int count = _userRepo.GetAllUsers().Count();
                 SeedData(newAddres);                ///ApplicationUser Email
-                return RedirectToAction("MyProfile");
+                return RedirectToAction("MyProfileView");
             }       
             return View("RegisterShipping");
         }
@@ -175,6 +175,9 @@ namespace authentication_repo.Controllers
 
             return View(model);
         }
-
+        public IActionResult MyProfileView()
+        {
+            return View();
+        }
     }
 }
