@@ -16,6 +16,7 @@ namespace TheBookCave.Migrations
                     CartId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     BookId = table.Column<int>(nullable: false),
+                    Date = table.Column<DateTime>(nullable: false),
                     Email = table.Column<string>(nullable: true),
                     Quantity = table.Column<int>(nullable: false)
                 },

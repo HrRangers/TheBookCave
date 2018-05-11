@@ -9,6 +9,7 @@ using TheBookCave.Repositories;
 using TheBookCave.Models.EntityModels;
 using TheBookCave.Data;
 using TheBookCave.Models.ViewModels;
+using TheBookCave.ViewModels;
 
 namespace TheBookCave.Controllers
 {
@@ -37,6 +38,7 @@ namespace TheBookCave.Controllers
             return RedirectToAction("LogIn", "User", new { area = "" });
         }
 
+<<<<<<< HEAD
         
         [HttpPost]
         public IActionResult AddToCart(int id)
@@ -80,5 +82,7 @@ namespace TheBookCave.Controllers
         }
 
 
+=======
+>>>>>>> a28a585fea1477e2175bc1741481b817975371b4
     }
 }

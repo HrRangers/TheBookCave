@@ -1,3 +1,4 @@
+using System;
 namespace TheBookCave.Models.EntityModels
 {
     public class Cart
@@ -6,6 +7,7 @@ namespace TheBookCave.Models.EntityModels
         public int BookId { get; set; }
         public int Quantity { get; set; }
         public string Email { get; set; }
+        public DateTime Date { get; set; }
     }
 
 }

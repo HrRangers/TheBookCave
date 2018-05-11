@@ -55,6 +55,8 @@ namespace TheBookCave.Migrations
 
                     b.Property<int>("BookId");
 
+                    b.Property<DateTime>("Date");
+
                     b.Property<string>("Email");
 
                     b.Property<int>("Quantity");
