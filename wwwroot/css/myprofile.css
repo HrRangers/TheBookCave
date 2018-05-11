@@ -38,7 +38,7 @@ a button.btn.btn-default {
     bottom: 0;
 
 }
-a button .btn.btn-default:hover {
+a button.btn.btn-default:hover {
     color: aqua;
     border-radius: 10px;
     border: solid 3px aqua;
